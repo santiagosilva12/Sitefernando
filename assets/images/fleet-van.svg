@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071324"/>
+      <stop offset="50%" stop-color="#112239"/>
+      <stop offset="100%" stop-color="#080F1B"/>
+    </linearGradient>
+    <linearGradient id="vanBody" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="25%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="75%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0A0F1D"/>
+    </linearGradient>
+    <linearGradient id="vanGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A896" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="vanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5D0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="20" fill="url(#vanBg)"/>
+  
+  <ellipse cx="400" cy="370" rx="350" ry="32" fill="#000000" opacity="0.65"/>
+  <ellipse cx="400" cy="370" rx="280" ry="12" fill="#00A896" opacity="0.18"/>
+
+  <!-- Sprinter Executive Silhouette -->
+  <g id="van-vehicle">
+    <!-- Tall van profile -->
+    <path d="M 115 330 L 115 150 C 115 130, 135 120, 160 120 L 590 120 C 625 120, 650 145, 680 200 L 715 250 C 735 280, 735 320, 725 342 L 120 342 Z" fill="url(#vanBody)" stroke="#38BDF8" stroke-width="0.75" stroke-opacity="0.4"/>
+    
+    <!-- Van High Roof Line -->
+    <rect x="135" y="112" width="460" height="8" rx="4" fill="#64748B" opacity="0.5"/>
+
+    <!-- Large Continuous Tinted Executive Windows -->
+    <path d="M 140 145 L 585 145 C 605 145, 620 160, 640 200 L 675 240 L 140 240 Z" fill="url(#vanGlass)" stroke="#00E5D0" stroke-width="1.2" stroke-opacity="0.6"/>
+    
+    <!-- VIP Window Separators -->
+    <line x1="225" y1="145" x2="225" y2="240" stroke="#0F172A" stroke-width="5"/>
+    <line x1="315" y1="145" x2="315" y2="240" stroke="#0F172A" stroke-width="5"/>
+    <line x1="405" y1="145" x2="405" y2="240" stroke="#0F172A" stroke-width="5"/>
+    <line x1="495" y1="145" x2="495" y2="240" stroke="#0F172A" stroke-width="5"/>
+    <line x1="585" y1="145" x2="585" y2="240" stroke="#0F172A" stroke-width="6"/>
+
+    <!-- Sliding Door Handle & Step -->
+    <rect x="360" y="255" width="28" height="6" rx="3" fill="#94A3B8"/>
+    <rect x="290" y="334" width="210" height="10" rx="3" fill="#1E293B" stroke="#00A896" stroke-width="1.5"/>
+
+    <!-- LED Headlight / Tail light -->
+    <path d="M 710 265 L 730 275 L 715 288 Z" fill="#00E5D0"/>
+    <polygon points="730,275 800,250 800,310 730,288" fill="url(#vanGlow)"/>
+    <path d="M 120 230 L 115 240 L 115 270 L 120 270 Z" fill="#EF4444"/>
+
+    <!-- Teal Dynamic Chrome Beltline -->
+    <path d="M 125 250 L 710 250" stroke="#00A896" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    
+    <!-- Wheels -->
+    <g transform="translate(605, 335)">
+      <circle r="48" fill="#030712" stroke="#4B5563" stroke-width="5"/>
+      <circle r="34" fill="#1F2937" stroke="#00A896" stroke-width="2"/>
+      <circle r="16" fill="#9CA3AF"/>
+      <line x1="-30" y1="0" x2="30" y2="0" stroke="#F3F4F6" stroke-width="3"/>
+      <line x1="0" y1="-30" x2="0" y2="30" stroke="#F3F4F6" stroke-width="3"/>
+      <line x1="-21" y1="-21" x2="21" y2="21" stroke="#F3F4F6" stroke-width="3"/>
+      <line x1="-21" y1="21" x2="21" y2="-21" stroke="#F3F4F6" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(210, 335)">
+      <circle r="48" fill="#030712" stroke="#4B5563" stroke-width="5"/>
+      <circle r="34" fill="#1F2937" stroke="#00A896" stroke-width="2"/>
+      <circle r="16" fill="#9CA3AF"/>
+      <line x1="-30" y1="0" x2="30" y2="0" stroke="#F3F4F6" stroke-width="3"/>
+      <line x1="0" y1="-30" x2="0" y2="30" stroke="#F3F4F6" stroke-width="3"/>
+      <line x1="-21" y1="-21" x2="21" y2="21" stroke="#F3F4F6" stroke-width="3"/>
+      <line x1="-21" y1="21" x2="21" y2="-21" stroke="#F3F4F6" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Badge Top -->
+  <rect x="30" y="30" width="160" height="38" rx="8" fill="#00A896" fill-opacity="0.15" stroke="#00A896" stroke-width="1.5"/>
+  <text x="110" y="54" fill="#00E5D0" font-family="'Montserrat', sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">VAN EXECUTIVA</text>
+
+  <g transform="translate(600, 35)">
+    <rect width="170" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="85" y="24" fill="#CBD5E1" font-family="'Montserrat', sans-serif" font-size="12" font-weight="600" text-anchor="middle">De 15 a 19 Passageiros</text>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 542" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#008F85"/>
+      <stop offset="50%" stop-color="#00A896"/>
+      <stop offset="100%" stop-color="#02C39A"/>
+    </linearGradient>
+    <linearGradient id="roadSilver" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="roadTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#007B75"/>
+      <stop offset="60%" stop-color="#00A896"/>
+      <stop offset="100%" stop-color="#00E5C9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Water fountain / Geyser -->
+  <g id="geyser">
+    <!-- Center plume -->
+    <path d="M 505 160 C 504 110, 506 60, 512 8 C 516 60, 518 110, 517 160 Z" fill="url(#tealGrad)"/>
+    <path d="M 508 12 C 512 5, 522 5, 532 20 C 536 26, 526 28, 518 20 Z" fill="url(#tealGrad)"/>
+    <path d="M 514 12 C 510 5, 500 5, 490 20 C 486 26, 496 28, 504 20 Z" fill="url(#tealGrad)"/>
+    <!-- Left fountain spray -->
+    <path d="M 504 150 C 496 100, 485 55, 460 62 C 440 68, 442 85, 452 92 C 468 76, 485 105, 496 155 Z" fill="url(#tealGrad)"/>
+    <!-- Right fountain spray -->
+    <path d="M 518 150 C 526 100, 537 55, 562 62 C 582 68, 580 85, 570 92 C 554 76, 537 105, 526 155 Z" fill="url(#tealGrad)"/>
+  </g>
+
+  <!-- Twin Mountains -->
+  <g id="mountains" fill="#0B1B32">
+    <!-- Left higher mountain -->
+    <path d="M 112 278 C 220 220, 310 120, 440 100 C 485 93, 520 135, 550 178 C 510 184, 460 170, 430 116 C 315 136, 235 228, 112 278 Z"/>
+    <!-- Right mountain peak -->
+    <path d="M 548 180 C 600 130, 645 125, 700 138 C 765 155, 830 220, 890 248 C 840 220, 780 168, 700 152 C 655 142, 615 150, 548 180 Z"/>
+    <!-- Mountain center junction shading -->
+    <path d="M 540 176 L 555 190 L 570 175 Z" fill="#071224"/>
+  </g>
+
+  <!-- Dynamic Highway / Road perspective swooshes -->
+  <g id="highway">
+    <!-- Top thin dark road curve -->
+    <path d="M 280 238 C 420 216, 620 212, 875 240 C 720 220, 500 222, 280 238 Z" fill="#0B1B32"/>
+    <!-- Middle turquoise ribbon -->
+    <path d="M 368 338 C 430 280, 520 240, 850 226 C 650 236, 470 265, 410 338 Z" fill="url(#roadTeal)"/>
+    <!-- Left/bottom silver ribbon -->
+    <path d="M 175 330 C 270 300, 370 252, 660 226 C 450 242, 310 278, 235 330 Z" fill="url(#roadSilver)"/>
+  </g>
+
+  <!-- Subtitle: TRANSPORTE EXECUTIVO -->
+  <g id="subtitle" fill="#009A90" stroke="#009A90">
+    <!-- Left rule -->
+    <line x1="88" y1="388" x2="210" y2="388" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Centered text -->
+    <text x="512" y="396" font-family="'Montserrat', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="11" text-anchor="middle" stroke="none">TRANSPORTE EXECUTIVO</text>
+    <!-- Right rule -->
+    <line x1="814" y1="388" x2="936" y2="388" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Main Title: POÇOS DE CALDAS -->
+  <g id="title" fill="#071527">
+    <text x="512" y="492" font-family="'Montserrat', 'Segoe UI', 'Arial Black', sans-serif" font-size="82" font-weight="900" letter-spacing="1.5" text-anchor="middle">POÇOS DE CALDAS</text>
+  </g>
+</svg>

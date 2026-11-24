@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sedanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B192C"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="30%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="70%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0A0F1D"/>
+    </linearGradient>
+    <linearGradient id="carGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A896" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#0F172A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5D0" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00A896" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card Backdrop -->
+  <rect width="800" height="450" rx="20" fill="url(#sedanBg)"/>
+  
+  <!-- Subtle Grid/Floor Perspective -->
+  <path d="M 0 360 L 800 360" stroke="#334155" stroke-width="1.5" stroke-dasharray="8 8"/>
+  <ellipse cx="400" cy="365" rx="330" ry="32" fill="#000000" opacity="0.6"/>
+  <ellipse cx="400" cy="365" rx="260" ry="12" fill="#00A896" opacity="0.15"/>
+
+  <!-- Sedan Silhouette & Body -->
+  <g id="sedan-vehicle">
+    <!-- Main Car Body -->
+    <path d="M 120 330 C 120 310, 150 280, 200 275 C 260 270, 310 240, 360 200 C 420 160, 520 160, 580 195 C 640 230, 680 250, 710 280 C 730 300, 725 330, 715 340 L 130 340 Z" fill="url(#carBody)" stroke="#38BDF8" stroke-width="0.75" stroke-opacity="0.4"/>
+    
+    <!-- Cabin Glass / Windows (Tinted VIP) -->
+    <path d="M 365 208 C 420 170, 510 170, 570 202 C 610 230, 635 245, 650 265 L 320 265 C 335 245, 350 220, 365 208 Z" fill="url(#carGlass)" stroke="#00E5D0" stroke-width="1" stroke-opacity="0.5"/>
+    <!-- Window Pillar -->
+    <line x1="475" y1="175" x2="475" y2="265" stroke="#0F172A" stroke-width="6"/>
+
+    <!-- Headlight & Tail Light Flares -->
+    <path d="M 700 295 L 720 305 L 705 315 Z" fill="#00E5D0"/>
+    <polygon points="720,305 800,285 800,340 720,315" fill="url(#neonGlow)"/>
+    <path d="M 130 295 L 120 305 L 125 315 Z" fill="#EF4444"/>
+
+    <!-- Body Accent Crease -->
+    <path d="M 150 300 C 300 285, 550 285, 710 305" stroke="#00A896" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 180 320 C 350 315, 550 315, 680 325" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- Front Wheel -->
+    <g transform="translate(605, 335)">
+      <circle r="46" fill="#050B14" stroke="#475569" stroke-width="4"/>
+      <circle r="34" fill="#1E293B" stroke="#00A896" stroke-width="2"/>
+      <circle r="16" fill="#64748B"/>
+      <!-- Alloy Spokes -->
+      <line x1="-30" y1="0" x2="30" y2="0" stroke="#CBD5E1" stroke-width="3"/>
+      <line x1="0" y1="-30" x2="0" y2="30" stroke="#CBD5E1" stroke-width="3"/>
+      <line x1="-21" y1="-21" x2="21" y2="21" stroke="#CBD5E1" stroke-width="3"/>
+      <line x1="-21" y1="21" x2="21" y2="-21" stroke="#CBD5E1" stroke-width="3"/>
+    </g>
+
+    <!-- Rear Wheel -->
+    <g transform="translate(235, 335)">
+      <circle r="46" fill="#050B14" stroke="#475569" stroke-width="4"/>
+      <circle r="34" fill="#1E293B" stroke="#00A896" stroke-width="2"/>
+      <circle r="16" fill="#64748B"/>
+      <!-- Alloy Spokes -->
+      <line x1="-30" y1="0" x2="30" y2="0" stroke="#CBD5E1" stroke-width="3"/>
+      <line x1="0" y1="-30" x2="0" y2="30" stroke="#CBD5E1" stroke-width="3"/>
+      <line x1="-21" y1="-21" x2="21" y2="21" stroke="#CBD5E1" stroke-width="3"/>
+      <line x1="-21" y1="21" x2="21" y2="-21" stroke="#CBD5E1" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Badge Top -->
+  <rect x="30" y="30" width="170" height="38" rx="8" fill="#00A896" fill-opacity="0.15" stroke="#00A896" stroke-width="1.5"/>
+  <text x="115" y="54" fill="#00E5D0" font-family="'Montserrat', sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SEDAN EXECUTIVO</text>
+
+  <!-- Passenger specs indicator -->
+  <g transform="translate(630, 35)">
+    <rect width="140" height="38" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="70" y="24" fill="#CBD5E1" font-family="'Montserrat', sans-serif" font-size="12" font-weight="600" text-anchor="middle">Até 4 Passageiros</text>
+  </g>
+</svg>
