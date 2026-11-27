@@ -768,35 +768,9 @@ button, input, select, textarea {
   letter-spacing: 1px;
 }
 
-/* Floating Icon between cover and body */
-.service-icon-floating {
-  position: absolute;
-  bottom: -22px;
-  left: 24px;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-850));
-  border: 2px solid var(--teal-400);
-  color: var(--teal-300);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  z-index: 5;
-  transition: var(--transition);
-}
-
-.service-card:hover .service-icon-floating {
-  background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
-  color: var(--navy-950);
-  transform: rotate(-6deg) scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 168, 150, 0.4);
-}
-
 /* Service Body Content */
 .service-card-body {
-  padding: 34px 24px 26px;
+  padding: 24px 24px 22px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -804,10 +778,10 @@ button, input, select, textarea {
 
 .service-card-body h3 {
   font-family: var(--font-heading);
-  font-size: 1.28rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--navy-900);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.35;
   transition: color 0.3s ease;
 }
@@ -817,48 +791,11 @@ button, input, select, textarea {
 }
 
 .service-card-body p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--silver-500);
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.65;
+  margin-bottom: 22px;
   flex-grow: 1;
-}
-
-/* Modern Pill Badges for Features */
-.service-pills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-  padding-top: 14px;
-  border-top: 1px solid var(--silver-200);
-}
-
-.service-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--silver-100);
-  color: var(--navy-850);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 5px 11px;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(0, 168, 150, 0.15);
-  transition: var(--transition);
-}
-
-.service-card:hover .service-pill {
-  background: var(--teal-100);
-  color: var(--teal-600);
-  border-color: rgba(0, 168, 150, 0.3);
-}
-
-.service-pill svg {
-  width: 13px;
-  height: 13px;
-  color: var(--teal-500);
-  flex-shrink: 0;
 }
 
 /* Action Button inside Card */
@@ -896,13 +833,14 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   FLEET / NOSSA FROTA (4 Cards com Carros Reais)
+   FLEET / NOSSA FROTA (Grand Executive Carousel - Maior, Sem Textos Longos)
    ========================================================================== */
 .fleet-section {
-  padding: 100px 0;
+  padding: 110px 0;
   background-color: var(--navy-950);
   color: var(--white);
   position: relative;
+  overflow: hidden;
 }
 
 .fleet-section .section-title {
@@ -913,127 +851,213 @@ button, input, select, textarea {
   color: var(--silver-400);
 }
 
-.fleet-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-bottom: 50px;
-}
-
-.fleet-card {
-  background: var(--navy-900);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-}
-
-.fleet-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--teal-400);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 229, 208, 0.15);
-}
-
-.fleet-image {
-  width: 100%;
-  height: 210px;
-  background: #000;
+/* Fleet Carousel Wrapper */
+.fleet-carousel-wrapper {
   position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fleet-carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.fleet-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  width: 100%;
+}
+
+/* Big Executive Fleet Slide */
+.fleet-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  background: var(--navy-900);
+  border: 1px solid rgba(0, 229, 208, 0.25);
+  border-radius: var(--radius-xl);
   overflow: hidden;
 }
 
-.fleet-image img {
+.fleet-slide-image {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  background: #000;
+  overflow: hidden;
+}
+
+.fleet-slide-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
-.fleet-card:hover .fleet-image img {
-  transform: scale(1.06);
+.fleet-slide:hover .fleet-slide-image img {
+  transform: scale(1.05);
 }
 
-.fleet-badge-tag {
+.fleet-slide-badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 20px;
+  left: 20px;
   background: rgba(7, 21, 39, 0.88);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--teal-400);
   color: var(--teal-300);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
 }
 
-.fleet-content {
-  padding: 24px 20px;
+/* Slide Info (Clean: Title, Models, Specs, Button - No Long Text) */
+.fleet-slide-info {
+  padding: 40px 36px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy-900) 0%, rgba(11, 30, 54, 0.95) 100%);
 }
 
-.fleet-header {
-  margin-bottom: 6px;
-}
-
-.fleet-header h3 {
+.fleet-slide-header h3 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 2.1rem;
+  font-weight: 800;
   color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 8px;
 }
 
-.fleet-models {
-  font-size: 0.82rem;
+.fleet-slide-models {
+  font-size: 0.95rem;
   color: var(--teal-300);
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 28px;
 }
 
-.fleet-desc {
-  font-size: 0.86rem;
-  color: var(--silver-300);
-  line-height: 1.55;
-  margin-bottom: 18px;
-  flex-grow: 1;
-}
-
-.fleet-amenities {
+.fleet-slide-amenities {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 14px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 18px;
+  gap: 14px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
 }
 
-.amenity-item {
+.fleet-slide-amenity {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.76rem;
+  gap: 10px;
+  font-size: 0.88rem;
   color: var(--silver-300);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.amenity-item svg {
-  width: 14px;
-  height: 14px;
+.fleet-slide-amenity svg {
+  width: 18px;
+  height: 18px;
   color: var(--teal-300);
   flex-shrink: 0;
 }
 
-.fleet-btn {
+.btn-fleet-cta {
   width: 100%;
-  padding: 10px 16px;
-  font-size: 0.88rem;
+  padding: 15px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Carousel Arrow Buttons */
+.fleet-nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(11, 30, 54, 0.9);
+  border: 1px solid rgba(0, 229, 208, 0.4);
+  color: var(--teal-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+}
+
+.fleet-nav-btn:hover {
+  background: var(--teal-500);
+  color: var(--navy-950);
+  border-color: var(--teal-300);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 229, 208, 0.5);
+}
+
+.fleet-nav-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Carousel Dots */
+.fleet-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.fleet-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.fleet-dot:hover {
+  background: var(--teal-400);
+}
+
+.fleet-dot.active {
+  width: 34px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--teal-500), var(--teal-300));
+  border-color: var(--teal-300);
+  box-shadow: 0 0 12px rgba(0, 229, 208, 0.5);
+}
+
+@media (max-width: 900px) {
+  .fleet-slide {
+    grid-template-columns: 1fr;
+  }
+  .fleet-slide-image {
+    height: 280px;
+  }
+  .fleet-slide-info {
+    padding: 28px 22px;
+  }
+  .fleet-slide-header h3 {
+    font-size: 1.6rem;
+  }
+  .fleet-nav-btn {
+    display: none;
+  }
 }
 
 /* ==========================================================================

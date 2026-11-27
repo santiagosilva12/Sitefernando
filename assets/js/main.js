@@ -98,4 +98,75 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Fleet Interactive Carousel
+  const fleetTrack = document.getElementById('fleetTrack');
+  const fleetSlides = document.querySelectorAll('.fleet-slide');
+  const fleetPrev = document.getElementById('fleetPrev');
+  const fleetNext = document.getElementById('fleetNext');
+  const fleetDots = document.querySelectorAll('.fleet-dot');
+  
+  if (fleetTrack && fleetSlides.length > 0) {
+    let currentSlide = 0;
+    const totalSlides = fleetSlides.length;
+
+    function goToSlide(index) {
+      if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+
+      fleetTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // Update dots
+      fleetDots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    if (fleetPrev) {
+      fleetPrev.addEventListener('click', () => {
+        goToSlide(currentSlide - 1);
+      });
+    }
+
+    if (fleetNext) {
+      fleetNext.addEventListener('click', () => {
+        goToSlide(currentSlide + 1);
+      });
+    }
+
+    fleetDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetIndex = parseInt(dot.getAttribute('data-index'), 10);
+        goToSlide(targetIndex);
+      });
+    });
+
+    // Touch Swipe Support for Mobile
+    let startX = 0;
+    let endX = 0;
+    fleetTrack.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    fleetTrack.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    }, { passive: true });
+  }
 });
