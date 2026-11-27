@@ -344,8 +344,8 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
-  filter: brightness(0.85) contrast(1.1);
+  opacity: 0.55;
+  filter: brightness(0.95) contrast(1.05);
 }
 
 .hero-video-overlay {
@@ -354,7 +354,7 @@ button, input, select, textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 75% 20%, rgba(7, 21, 39, 0.6) 0%, rgba(4, 13, 24, 0.94) 75%);
+  background: radial-gradient(circle at 65% 35%, rgba(7, 21, 39, 0.22) 0%, rgba(4, 13, 24, 0.72) 80%);
 }
 
 .hero .container {
@@ -1011,7 +1011,7 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   FLEET / NOSSA FROTA (Slim Cards Grid - Todos os Modelos Visíveis & Sem Fundo)
+   FLEET / NOSSA FROTA (Slim Cards Grid - Espaçoso, Sem Fundo & Com Blindados)
    ========================================================================== */
 .fleet-section {
   padding: 100px 0;
@@ -1027,120 +1027,101 @@ button, input, select, textarea {
 
 .fleet-section .section-subtitle {
   color: var(--silver-400);
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto 50px;
+}
+
+.container-wide {
+  max-width: 1420px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .fleet-grid-slim {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 32px;
 }
 
 .fleet-card-slim {
-  background: linear-gradient(180deg, rgba(14, 32, 57, 0.85) 0%, rgba(7, 21, 39, 0.98) 100%);
-  border: 1px solid rgba(0, 229, 208, 0.22);
-  border-radius: var(--radius-lg);
-  padding: 24px 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px 28px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.35s cubic-bezier(0.2, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.2, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
   position: relative;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
 }
 
 .fleet-card-slim:hover {
-  transform: translateY(-8px);
-  border-color: rgba(0, 229, 208, 0.55);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 168, 150, 0.25);
+  transform: translateY(-10px);
+  background: rgba(14, 32, 57, 0.4);
+  border-color: rgba(0, 229, 208, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 168, 150, 0.2);
 }
 
 .fleet-card-badge {
   display: inline-block;
-  align-self: flex-start;
-  padding: 4px 12px;
+  align-self: center;
+  padding: 5px 14px;
   background: rgba(0, 168, 150, 0.15);
   border: 1px solid rgba(0, 229, 208, 0.35);
   color: var(--teal-300);
   border-radius: var(--radius-full);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .fleet-card-slim-img {
   width: 100%;
-  height: 155px;
+  height: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0 16px;
+  margin: 10px 0 20px;
   position: relative;
 }
 
 .fleet-card-slim-img img {
   max-width: 100%;
-  max-height: 140px;
+  max-height: 170px;
   object-fit: contain;
-  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.75));
   transition: transform 0.4s ease;
 }
 
 .fleet-card-slim:hover .fleet-card-slim-img img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .fleet-card-slim-header h3 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .fleet-card-models {
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   color: var(--silver-400);
-  margin-bottom: 18px;
+  margin-bottom: 24px;
   min-height: 38px;
   line-height: 1.4;
 }
 
-.fleet-card-specs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 22px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  flex-grow: 1;
-}
-
-.fleet-spec-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.82rem;
-  color: var(--silver-300);
-}
-
-.fleet-spec-item svg {
-  width: 16px;
-  height: 16px;
-  color: var(--teal-300);
-  flex-shrink: 0;
-}
-
 .btn-fleet-slim {
   width: 100%;
-  padding: 12px 16px;
+  padding: 13px 20px;
   background: linear-gradient(135deg, var(--teal-500) 0%, var(--teal-600) 100%);
   color: var(--white);
   font-weight: 700;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -1152,20 +1133,83 @@ button, input, select, textarea {
 
 .btn-fleet-slim:hover {
   background: linear-gradient(135deg, var(--teal-400) 0%, var(--teal-500) 100%);
-  box-shadow: 0 8px 20px rgba(0, 168, 150, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 168, 150, 0.45);
   transform: translateY(-2px);
 }
 
-@media (max-width: 1100px) {
+/* Frota Blindada Banner (Saída Exclusiva de SP) */
+.fleet-blindado-banner {
+  margin-top: 55px;
+  background: linear-gradient(135deg, rgba(14, 32, 57, 0.85) 0%, rgba(7, 21, 39, 0.95) 100%);
+  border: 1px solid rgba(0, 229, 208, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 34px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.blindado-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 168, 150, 0.2);
+  border: 1px solid var(--teal-400);
+  color: var(--teal-300);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.blindado-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.blindado-info p {
+  color: var(--silver-300);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+.blindado-info p strong {
+  color: var(--teal-300);
+}
+
+.btn-blindado-action {
+  white-space: nowrap;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1150px) {
   .fleet-grid-slim {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 24px;
+  }
+  .fleet-blindado-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 @media (max-width: 640px) {
   .fleet-grid-slim {
     grid-template-columns: 1fr;
+  }
+  .fleet-blindado-banner {
+    padding: 24px 20px;
   }
 }
   width: 12px;
@@ -1223,6 +1267,15 @@ button, input, select, textarea {
   position: relative;
 }
 
+.confidence-section .section-title {
+  color: #FFFFFF !important;
+  font-weight: 800;
+}
+
+.confidence-section .section-subtitle {
+  color: var(--silver-300) !important;
+}
+
 .confidence-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1275,7 +1328,7 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   STEP BY STEP TIMELINE (Do Primeiro Contato ao Último Trajeto)
+   STEP BY STEP JOURNEY (Do Primeiro Contato ao Último Trajeto - Moderno)
    ========================================================================== */
 .steps-section {
   padding: 100px 0;
@@ -1283,71 +1336,113 @@ button, input, select, textarea {
   position: relative;
 }
 
-.steps-timeline {
-  max-width: 820px;
-  margin: 50px auto 0;
-  position: relative;
-  padding-left: 55px;
+.steps-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
 }
 
-.steps-timeline::before {
+.step-journey-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 32px 26px;
+  border: 1px solid var(--silver-200);
+  box-shadow: 0 10px 25px rgba(7, 21, 39, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-journey-card::before {
   content: '';
   position: absolute;
-  top: 24px;
-  bottom: 30px;
-  left: 20px;
-  width: 3px;
-  background: linear-gradient(180deg, var(--teal-500) 0%, var(--teal-300) 50%, rgba(0, 168, 150, 0.25) 100%);
-  border-radius: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal-500), var(--teal-300));
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.step-card {
-  position: relative;
-  margin-bottom: 32px;
-  background: var(--white);
-  border: 1px solid var(--silver-200);
-  border-radius: var(--radius-lg);
-  padding: 24px 28px;
-  transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(7, 21, 39, 0.03);
-}
-
-.step-card:hover {
+.step-journey-card:hover {
+  transform: translateY(-8px);
   border-color: var(--teal-400);
-  transform: translateX(8px);
-  box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 168, 150, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 168, 150, 0.12);
 }
 
-.step-marker {
-  position: absolute;
-  left: -55px;
-  top: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--navy-950);
-  border: 3px solid var(--teal-400);
-  color: var(--teal-300);
-  font-size: 0.82rem;
-  font-weight: 800;
+.step-journey-card:hover::before {
+  opacity: 1;
+}
+
+.step-journey-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.step-journey-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--teal-500);
+  line-height: 1;
+}
+
+.step-journey-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 168, 150, 0.1);
+  color: var(--teal-600);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 14px rgba(0, 229, 208, 0.45);
 }
 
-.step-card h4 {
+.step-journey-pill {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  background: rgba(0, 168, 150, 0.08);
+  border: 1px solid rgba(0, 168, 150, 0.25);
+  color: var(--teal-700);
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.step-journey-card h4 {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--navy-900);
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
-.step-card p {
-  font-size: 0.94rem;
+.step-journey-card p {
+  font-size: 0.88rem;
   color: var(--silver-500);
   line-height: 1.6;
+}
+
+@media (max-width: 1050px) {
+  .steps-journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .steps-journey-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================

@@ -4,6 +4,12 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Slow down hero background video for smooth, elegant executive look
+  const heroVideo = document.querySelector('.hero-video-bg video');
+  if (heroVideo) {
+    heroVideo.playbackRate = 0.65;
+  }
+
   // Mobile Nav Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const navLinks = document.getElementById('navLinks');
