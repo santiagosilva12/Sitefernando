@@ -7,8 +7,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // Slow down hero background video for smooth, elegant executive look
   const heroVideo = document.querySelector('.hero-video-bg video');
   if (heroVideo) {
-    heroVideo.playbackRate = 0.65;
+    heroVideo.playbackRate = 0.55;
   }
+
+  // Language Selector (PT | EN | ES)
+  const langButtons = document.querySelectorAll('.lang-btn');
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      langButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const lang = btn.getAttribute('data-lang');
+      if (lang === 'en') {
+        const waBtns = document.querySelectorAll('a[href^="https://wa.me"]');
+        waBtns.forEach(a => {
+          if (!a.dataset.originalHref) a.dataset.originalHref = a.getAttribute('href');
+          a.setAttribute('href', 'https://wa.me/553591215394?text=Hello!%20I%20would%20like%20to%20request%20a%20quote%20for%20executive%20transportation.');
+        });
+      } else if (lang === 'es') {
+        const waBtns = document.querySelectorAll('a[href^="https://wa.me"]');
+        waBtns.forEach(a => {
+          if (!a.dataset.originalHref) a.dataset.originalHref = a.getAttribute('href');
+          a.setAttribute('href', 'https://wa.me/553591215394?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20de%20transporte%20ejecutivo.');
+        });
+      } else {
+        const waBtns = document.querySelectorAll('a[href^="https://wa.me"]');
+        waBtns.forEach(a => {
+          if (a.dataset.originalHref) a.setAttribute('href', a.dataset.originalHref);
+        });
+      }
+    });
+  });
 
   // Mobile Nav Toggle
   const mobileToggle = document.getElementById('mobileToggle');
