@@ -69,12 +69,11 @@
       <!-- Desktop Nav -->
       <nav class="nav-links" id="navLinks">
         <a href="#inicio" class="nav-link active">Início</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#cotacao" class="nav-link">Orçamento Rápido</a>
+        <a href="#passo-a-passo" class="nav-link">Como Funciona</a>
+        <a href="#trajetos" class="nav-link">Veículo Real</a>
         <a href="#frota" class="nav-link">Frota</a>
-        <a href="#rotas" class="nav-link">Rotas & Aeroportos</a>
-        <a href="#diferenciais" class="nav-link">Diferenciais</a>
-        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
         <a href="#faq" class="nav-link">Dúvidas</a>
       </nav>
 
@@ -94,9 +93,18 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION (Alto Padrão Executivo - Sem Formulário de Cotação)
+       HERO SECTION (Vídeo de Fundo Minimalista & Formulário Rápido de Cotação)
        ========================================================================== -->
   <section class="hero" id="inicio">
+    <!-- Minimalist Executive Video Background -->
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline poster="assets/images/hero.jpg">
+        <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        <source src="assets/videos/hero-bg.webm" type="video/webm">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
     <div class="container hero-grid">
       <!-- Left Hero Content -->
       <div class="hero-content">
@@ -106,20 +114,20 @@
         </div>
 
         <h1 class="hero-title">
-          Mobilidade Privativa com <span class="highlight">Pontualidade & Discrição</span> Absoluta
+          E como você <span class="highlight">chega</span>.
         </h1>
 
         <p class="hero-description">
-          Conectamos Poços de Caldas e região aos principais aeroportos (Guarulhos, Viracopos, Congonhas, Confins), capitais e polos de negócios. Viagens corporativas, diárias e eventos com motoristas qualificados e veículos impecáveis 24 horas.
+          Transporte executivo com cuidado do primeiro contato ao último trajeto. Transfers para os principais aeroportos (Guarulhos, Congonhas, Viracopos, Confins), viagens corporativas e translados privativos com total discrição e pontualidade britânica.
         </p>
 
         <div class="hero-buttons">
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20imediata%20de%20transporte%20executivo." target="_blank" class="btn btn-teal">
+          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20um%20ve%C3%ADculo%20executivo." target="_blank" class="btn btn-teal">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
-            Solicitar Orçamento no WhatsApp
+            Reservar no WhatsApp
           </a>
-          <a href="#frota" class="btn btn-outline-light">
-            Conhecer Nossa Frota
+          <a href="#trajetos" class="btn btn-outline-light">
+            Ver Fotos do Veículo Real
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>
@@ -131,7 +139,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             </div>
             <div class="badge-text">
-              15 Minutos<br>de Antecedência
+              Resposta em até<br>15 Minutos
             </div>
           </div>
 
@@ -140,7 +148,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
             <div class="badge-text">
-              Seguro Total<br>de Passageiros (APP)
+              15 Minutos<br>de Antecedência
             </div>
           </div>
 
@@ -155,92 +163,282 @@
         </div>
       </div>
 
-      <!-- Right Showcase: Real Executive Car Presentation -->
-      <div class="hero-showcase">
-        <div class="hero-image-wrapper">
-          <img src="assets/images/hero.jpg" alt="Veículo Executivo de Alto Padrão em Rodovia">
-          <div class="hero-floating-badge">
-            <div class="floating-badge-text">
-              <h4>Atendimento Personalizado 24h</h4>
-              <p>Transfers Executivos • Aeroportos • Viagens</p>
-            </div>
-            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20ve%C3%ADculo%20executivo." target="_blank" class="btn btn-teal btn-floating-wa">
-              Agendar Agora
-            </a>
+      <!-- Right Column: Fast Quote / Booking Form (Estilo FourVIP) -->
+      <div class="hero-quote-card" id="cotacao">
+        <div class="quote-header">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Orçamento em menos de 1 minuto
+          </h3>
+          <p>Proposta por escrito, sem surpresas e direto no seu WhatsApp</p>
+        </div>
+
+        <!-- Form Tabs: Pedir Orçamento / Quero Reservar -->
+        <div class="quote-tabs">
+          <button type="button" class="quote-tab-btn active" data-type="Orçamento">Pedir orçamento</button>
+          <button type="button" class="quote-tab-btn" data-type="Reserva">Quero reservar</button>
+        </div>
+
+        <form id="fastQuoteForm">
+          <div class="quote-form-group">
+            <label for="quoteNome">Nome Completo / Empresa</label>
+            <input type="text" id="quoteNome" class="quote-form-input" placeholder="Ex: Carlos Silva ou Empresa S.A." required>
           </div>
+
+          <div class="quote-form-row">
+            <div class="quote-form-group">
+              <label for="quoteOrigem">Origem</label>
+              <input type="text" id="quoteOrigem" class="quote-form-input" placeholder="Ex: Poços de Caldas (MG)" value="Poços de Caldas (MG)" required>
+            </div>
+            <div class="quote-form-group">
+              <label for="quoteDestino">Destino Desejado</label>
+              <input type="text" id="quoteDestino" class="quote-form-input" placeholder="Ex: Aeroporto GRU, SP, BH" required>
+            </div>
+          </div>
+
+          <div class="quote-form-row">
+            <div class="quote-form-group">
+              <label for="quoteData">Data</label>
+              <input type="date" id="quoteData" class="quote-form-input" required>
+            </div>
+            <div class="quote-form-group">
+              <label for="quoteHora">Horário</label>
+              <input type="time" id="quoteHora" class="quote-form-input" required>
+            </div>
+          </div>
+
+          <div class="quote-form-row">
+            <div class="quote-form-group">
+              <label for="quotePassageiros">Passageiros</label>
+              <select id="quotePassageiros" class="quote-form-select">
+                <option value="1 a 2 passageiros">1 a 2 pessoas</option>
+                <option value="3 a 4 passageiros (Sedan)">3 a 4 pessoas (Sedan)</option>
+                <option value="5 a 6 passageiros (SUV)">5 a 6 pessoas (SUV)</option>
+                <option value="6 a 7 passageiros (Minivan)">6 a 7 pessoas (Minivan)</option>
+                <option value="8 a 19 passageiros (Van VIP)">8 a 19 pessoas (Van VIP)</option>
+              </select>
+            </div>
+            <div class="quote-form-group">
+              <label for="quoteVeiculo">Veículo Preferido</label>
+              <select id="quoteVeiculo" class="quote-form-select">
+                <option value="Sedan Executivo">Sedan Executivo</option>
+                <option value="SUV Premium">SUV Premium</option>
+                <option value="Minivan Executiva">Minivan Executiva</option>
+                <option value="Van Executiva VIP">Van Executiva VIP</option>
+                <option value="Sem preferência">Sem preferência</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-quote-whatsapp" id="btnSubmitQuote">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+
+          <p class="quote-footer-note">
+            Ao enviar, o WhatsApp abre com a mensagem pronta. É só tocar em enviar.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONFIDENCE / PILARES (Conteúdo que Gera Confiança - Sem "Experiência")
+       ========================================================================== -->
+  <section class="confidence-section" id="diferenciais">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="color: var(--teal-300);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Conteúdo que Gera Confiança
+        </div>
+        <h2 class="section-title">Você não precisa arriscar com quem não conhece.</h2>
+        <p class="section-subtitle">
+          Contratar transporte executivo é confiar sua agenda, sua segurança e sua imagem a alguém. Por isso trabalhamos com transparência total: empresa formalizada, proposta por escrito, pagamento seguro e compromisso absoluto.
+        </p>
+      </div>
+
+      <div class="confidence-grid">
+        <!-- Pillar 1: Cuidado -->
+        <div class="confidence-card">
+          <div class="confidence-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <h3>Cuidado</h3>
+          <p>
+            Serviço de bordo com água mineral gelada, ar-condicionado na sua temperatura ideal, condução suave e atenção dedicada ao que você precisa no caminho.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Confiança -->
+        <div class="confidence-card">
+          <div class="confidence-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3>Confiança</h3>
+          <p>
+            Empresa formalizada, proposta por escrito, preço fechado sem surpresas, pagamento seguro e pontualidade britânica com 15 minutos de antecedência.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Discrição -->
+        <div class="confidence-card">
+          <div class="confidence-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3>Discrição</h3>
+          <p>
+            O que acontece no carro fica no carro. Total privacidade para suas conversas estratégicas, ligações de negócios, reuniões e agenda protegida.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Segurança -->
+        <div class="confidence-card">
+          <div class="confidence-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>Segurança</h3>
+          <p>
+            Veículo com manutenção preventiva rigorosa em dia, pneus novos, direção defensiva profissional e seguro completo para todos os passageiros.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       ABOUT / QUEM SOMOS (Redesenhado com Imagem Real e Visual Premium)
+       STEP BY STEP (Do Primeiro Contato ao Último Trajeto)
        ========================================================================== -->
-  <section class="about-section" id="sobre">
-    <div class="container about-grid">
-      <!-- Visual Stack com Carro Real & Motorista Executivo -->
-      <div class="about-visual-stack">
-        <div class="about-main-image">
-          <img src="assets/images/about.jpg" alt="Motorista Executivo Profissional ao Volante">
+  <section class="steps-section" id="passo-a-passo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          Processo Simples & Transparente
         </div>
-        <div class="about-stat-card">
-          <h4>Excelência VIP</h4>
-          <p>Profissionais com condução defensiva, discrição e traje executivo.</p>
-        </div>
+        <h2 class="section-title">Do primeiro contato ao último trajeto.</h2>
+        <p class="section-subtitle">
+          Veja como funciona cada etapa da sua experiência conosco, com total clareza e sem imprevistos.
+        </p>
       </div>
 
-      <!-- Text Content -->
-      <div class="about-text">
+      <div class="steps-timeline">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-marker">01</div>
+          <h4>Primeiro contato</h4>
+          <p>
+            Resposta rápida em até 15 minutos pelo WhatsApp. Entendemos a sua rota, número de pessoas e bagagens, e enviamos uma proposta formalizada por escrito com valor fixo sem cobranças surpresas.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-marker">02</div>
+          <h4>Antes da viagem</h4>
+          <p>
+            Confirmação prévia do horário e envio dos dados do motorista executivo, modelo e placa do veículo. No caso de aeroportos, rastreamos o seu voo em tempo real para recepção pontual no portão.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-marker">03</div>
+          <h4>No trajeto</h4>
+          <p>
+            Veículo impecável e higienizado, serviço de bordo com água mineral gelada, temperatura sob medida no ar-condicionado e condução defensiva, suave e discreta para você descansar ou trabalhar a bordo.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card">
+          <div class="step-marker">04</div>
+          <h4>Pós-viagem</h4>
+          <p>
+            Documentação completa do serviço, envio imediato de Nota Fiscal para reembolso ou faturamento empresarial quinzenal/mensal (PJ), e suporte sempre à disposição para os seus próximos compromissos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       REAL TRIPS & CLIENT CAR (Trajetos Reais, Lugares de Destaque)
+       ========================================================================== -->
+  <section class="real-places-section" id="trajetos">
+    <div class="container">
+      <div class="section-header">
         <div class="section-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          Sobre Nossa Empresa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Nosso Veículo em Operação Real
         </div>
-        <h2 class="section-title">
-          Mobilidade Executiva de Alto Padrão em Poços de Caldas
-        </h2>
+        <h2 class="section-title">Trajetos reais, lugares de destaque.</h2>
         <p class="section-subtitle">
-          Especializada no transporte executivo corporativo, transfers aeroportuários e translados privativos, conectamos Poços de Caldas e todo o Sul de Minas aos maiores centros econômicos do país com total tranquilidade, pontualidade e sigilo.
+          Dos principais cartões-postais e hotéis de Poços de Caldas aos aeroportos e polos executivos de São Paulo e Minas Gerais. Confira fotos reais do nosso veículo:
         </p>
+      </div>
 
-        <!-- 4 Highlights Cards -->
-        <div class="about-highlights-grid">
-          <div class="about-highlight-box">
-            <h5>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              Pontualidade Britânica
-            </h5>
-            <p>Apresentação do veículo com no mínimo 15 minutos de antecedência no ponto combinado.</p>
-          </div>
-
-          <div class="about-highlight-box">
-            <h5>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Discrição & Confidencialidade
-            </h5>
-            <p>Ambiente privativo para você realizar reuniões e ligações estratégicas com absoluto sigilo.</p>
-          </div>
-
-          <div class="about-highlight-box">
-            <h5>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
-              Conforto a Bordo
-            </h5>
-            <p>Veículos higienizados, ar-condicionado dual zone, água mineral, Wi-Fi e carregadores.</p>
-          </div>
-
-          <div class="about-highlight-box">
-            <h5>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="12" x2="18" y2="12"></line></svg>
-              Faturamento PJ Facilitado
-            </h5>
-            <p>Emissão de nota fiscal de serviços e faturamento quinzenal ou mensal para empresas.</p>
+      <div class="real-places-grid">
+        <!-- Photo 1: Cristo Redentor -->
+        <div class="real-place-item">
+          <img src="assets/images/real/cristo-redentor.jpg" alt="Sedan Executivo no Cristo Redentor de Poços de Caldas">
+          <div class="real-place-overlay">
+            <span class="real-place-tag">PONTO TURÍSTICO NOBRE</span>
+            <h4>Cristo Redentor - Poços de Caldas</h4>
+            <p>Atendimento privativo nos cartões-postais e pontos turísticos mais nobres da cidade.</p>
           </div>
         </div>
 
-        <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Transporte%20Executivo%20Po%C3%A7os%20de%20Caldas." target="_blank" class="btn btn-navy">
-          Falar com um Consultor no WhatsApp
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
+        <!-- Photo 2: Serra de São Domingos -->
+        <div class="real-place-item">
+          <img src="assets/images/real/serra-sao-domingos.jpg" alt="Veículo Executivo no Mirante da Serra de São Domingos">
+          <div class="real-place-overlay">
+            <span class="real-place-tag">ROTEIRO PANORÂMICO</span>
+            <h4>Mirante da Serra de São Domingos</h4>
+            <p>Passeios exclusivos e translados com vista panorâmica e total conforto a bordo.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3: Vista Panorâmica -->
+        <div class="real-place-item">
+          <img src="assets/images/real/vista-panoramica.jpg" alt="Sedan Executivo em Rota Panorâmica">
+          <div class="real-place-overlay">
+            <span class="real-place-tag">VIAGENS & EVENTOS</span>
+            <h4>Rotas Cênicas & Estrada</h4>
+            <p>Condução tranquila e segura em rodovias e estradas da Serra da Mantiqueira.</p>
+          </div>
+        </div>
+
+        <!-- Photo 4: Serviço de Bordo -->
+        <div class="real-place-item">
+          <img src="assets/images/real/servico-de-bordo.jpg" alt="Serviço de Bordo com Água Mineral e Mimos">
+          <div class="real-place-overlay">
+            <span class="real-place-tag">SERVIÇO DE BORDO VIP</span>
+            <h4>Água Gelada & Cortesia</h4>
+            <p>Descanso de braço com bebidas frescas e atenção em cada detalhe da sua viagem.</p>
+          </div>
+        </div>
+
+        <!-- Photo 5: Espaço Traseiro -->
+        <div class="real-place-item">
+          <img src="assets/images/real/conforto-traseiro.jpg" alt="Interior Traseiro Limpo e Higienizado">
+          <div class="real-place-overlay">
+            <span class="real-place-tag">CONFORTO INTERNO</span>
+            <h4>Cabine Traseira Espaçosa</h4>
+            <p>Assentos higienizados, espaço para pernas e ambiente privativo e silencioso.</p>
+          </div>
+        </div>
+
+        <!-- Photo 6: Cabine & Multimídia -->
+        <div class="real-place-item">
+          <img src="assets/images/real/cabine-motorista.jpg" alt="Cabine Executiva com Painel Moderno">
+          <div class="real-place-overlay">
+            <span class="real-place-tag">TECNOLOGIA & SEGURANÇA</span>
+            <h4>Cabine Executiva Moderna</h4>
+            <p>Ar-condicionado eficiente, carregadores de celular e monitoramento constante.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

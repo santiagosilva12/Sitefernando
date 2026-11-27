@@ -169,4 +169,75 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // Fast Quote Form (FourVIP Style)
+  const quoteForm = document.getElementById('fastQuoteForm');
+  const quoteTabBtns = document.querySelectorAll('.quote-tab-btn');
+  let currentQuoteType = 'Orçamento';
+
+  if (quoteTabBtns.length > 0) {
+    quoteTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        quoteTabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentQuoteType = btn.getAttribute('data-type') || 'Orçamento';
+        
+        const submitBtn = document.getElementById('btnSubmitQuote');
+        if (submitBtn) {
+          submitBtn.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+            ${currentQuoteType === 'Reserva' ? 'Confirmar Reserva no WhatsApp' : 'Enviar pelo WhatsApp'}
+          `;
+        }
+      });
+    });
+  }
+
+  // Set default date and time if empty
+  const quoteDateInput = document.getElementById('quoteData');
+  const quoteTimeInput = document.getElementById('quoteHora');
+  if (quoteDateInput && !quoteDateInput.value) {
+    const today = new Date();
+    today.setDate(today.getDate() + 1); // Tomorrow
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    quoteDateInput.value = `${yyyy}-${mm}-${dd}`;
+  }
+  if (quoteTimeInput && !quoteTimeInput.value) {
+    quoteTimeInput.value = '08:00';
+  }
+
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('quoteNome')?.value.trim() || '';
+      const origem = document.getElementById('quoteOrigem')?.value.trim() || '';
+      const destino = document.getElementById('quoteDestino')?.value.trim() || '';
+      const data = document.getElementById('quoteData')?.value || '';
+      const hora = document.getElementById('quoteHora')?.value || '';
+      const passageiros = document.getElementById('quotePassageiros')?.value || '';
+      const veiculo = document.getElementById('quoteVeiculo')?.value || '';
+
+      // Format date nicely (DD/MM/YYYY)
+      let formattedDate = data;
+      if (data && data.includes('-')) {
+        const parts = data.split('-');
+        formattedDate = `${parts[2]}/${parts[1]}/${parts[0]}`;
+      }
+
+      let msg = `Olá! Gostaria de um *${currentQuoteType}* de Transporte Executivo:\n\n`;
+      if (nome) msg += `👤 *Nome:* ${nome}\n`;
+      if (origem) msg += `📍 *Origem:* ${origem}\n`;
+      if (destino) msg += `🏁 *Destino:* ${destino}\n`;
+      if (formattedDate) msg += `📅 *Data:* ${formattedDate}\n`;
+      if (hora) msg += `⏰ *Horário:* ${hora}\n`;
+      if (passageiros) msg += `👥 *Passageiros:* ${passageiros}\n`;
+      if (veiculo) msg += `🚗 *Veículo:* ${veiculo}\n`;
+      msg += `\nAguardo proposta formal por escrito. Obrigado!`;
+
+      const encoded = encodeURIComponent(msg);
+      window.open(`https://wa.me/5535999990000?text=${encoded}`, '_blank');
+    });
+  }
 });
