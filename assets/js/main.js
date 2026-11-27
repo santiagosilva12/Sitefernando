@@ -52,6 +52,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Services Category Filter
+  const filterButtons = document.querySelectorAll('.service-filter-btn');
+  const serviceCards = document.querySelectorAll('.service-card[data-category]');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      serviceCards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (filterValue === 'all' || cardCat === filterValue) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 250);
+        }
+      });
+    });
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

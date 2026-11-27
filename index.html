@@ -246,7 +246,7 @@
   </section>
 
   <!-- ==========================================================================
-       SERVICES / NOSSOS SERVIÇOS
+       SERVICES / NOSSOS SERVIÇOS (Redesenhado com Visual Exclusivo & Fotos Reais)
        ========================================================================== -->
   <section class="services-section" id="servicos">
     <div class="container">
@@ -255,131 +255,247 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
           Soluções Completas de Mobilidade
         </div>
-        <h2 class="section-title">Serviços Executivos Sob Medida</h2>
+        <h2 class="section-title">Serviços Executivos de Alto Padrão</h2>
         <p class="section-subtitle">
-          Atendemos às mais exigentes rotinas de viagens, conexões de voos, diárias e eventos com máxima discrição e pontualidade.
+          Atendemos às mais exigentes rotinas de viagens, conexões de voos, diárias e eventos com discrição absoluta, pontualidade e veículos impecáveis.
         </p>
       </div>
 
-      <div class="services-grid">
+      <!-- Category Filter Tabs -->
+      <div class="services-filter">
+        <button class="service-filter-btn active" data-filter="all">Todos os Serviços</button>
+        <button class="service-filter-btn" data-filter="aeroportos">✈️ Aeroportos & Conexões</button>
+        <button class="service-filter-btn" data-filter="corporativo">💼 Corporativo & B2B</button>
+        <button class="service-filter-btn" data-filter="viagens">🛣️ Viagens & Eventos</button>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
         <!-- Service 1: Airport Transfers -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
+        <div class="service-card" data-category="aeroportos">
+          <div class="service-card-cover">
+            <img src="assets/images/service-airport.jpg" alt="Transfers Aeroportuários VIP">
+            <div class="service-card-overlay">
+              <span class="service-category-tag">AEROPORTOS VIP</span>
+              <span class="service-number">01</span>
+            </div>
+            <div class="service-icon-floating">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
+            </div>
           </div>
-          <h3>Transfers Aeroportuários VIP</h3>
-          <p>
-            Receptivo exclusivo nos aeroportos de Guarulhos (GRU), Congonhas (CGH), Viracopos (VCP) e Confins (CNF). Rastreamento do seu voo em tempo real e recepção nominal na área de desembarque.
-          </p>
-          <ul class="service-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Monitoramento de voo sem taxa extra por atraso</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Receptivo com placa nominal no desembarque</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Auxílio completo com as bagagens</li>
-          </ul>
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Transfer%20Aeroporto." target="_blank" class="service-link">
-            Cotar no WhatsApp
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </a>
+          <div class="service-card-body">
+            <h3>Transfers Aeroportuários VIP</h3>
+            <p>
+              Receptivo de alto padrão nos aeroportos de Guarulhos (GRU), Congonhas (CGH), Viracopos (VCP) e Confins (CNF). Monitoramento de voo em tempo real e recepção nominal na área de desembarque.
+            </p>
+            <div class="service-pills-list">
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Rastreio de Voo em Tempo Real
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Placa Nominal no Desembarque
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Sem Taxa por Atrasos de Voo
+              </span>
+            </div>
+            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20para%20Transfer%20Aeroporto%20VIP." target="_blank" class="btn-service-action">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+              Solicitar no WhatsApp
+            </a>
+          </div>
         </div>
 
         <!-- Service 2: Corporate Transport -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <div class="service-card" data-category="corporativo">
+          <div class="service-card-cover">
+            <img src="assets/images/service-corporate.jpg" alt="Transporte Corporativo & B2B">
+            <div class="service-card-overlay">
+              <span class="service-category-tag">B2B & DIRETORIA</span>
+              <span class="service-number">02</span>
+            </div>
+            <div class="service-icon-floating">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
           </div>
-          <h3>Transporte Corporativo & B2B</h3>
-          <p>
-            Logística de transporte para CEOs, diretorias, visitas técnicas industriais, consultores e convidados estrangeiros. Ambiente privativo para continuar trabalhando a bordo.
-          </p>
-          <ul class="service-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Faturamento quinzenal ou mensal (PJ)</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Acordo de confidencialidade (NDA)</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Wi-Fi e tomadas para notebook</li>
-          </ul>
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte%20corporativo%20para%20minha%20empresa." target="_blank" class="service-link">
-            Cotar Corporativo
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </a>
+          <div class="service-card-body">
+            <h3>Transporte Corporativo & B2B</h3>
+            <p>
+              Logística executiva para CEOs, conselheiros, diretorias, visitas técnicas e convidados internacionais. Produtividade garantida a bordo com internet 5G e total confidencialidade.
+            </p>
+            <div class="service-pills-list">
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Faturamento Quinzenal / Mensal (PJ)
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Acordo de Confidencialidade (NDA)
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Ambiente Executivo Silencioso
+              </span>
+            </div>
+            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20uma%20proposta%20de%20Transporte%20Corporativo%20para%20minha%20empresa." target="_blank" class="btn-service-action">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+              Solicitar no WhatsApp
+            </a>
+          </div>
         </div>
 
         <!-- Service 3: At Disposal / Diárias -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <div class="service-card" data-category="corporativo">
+          <div class="service-card-cover">
+            <img src="assets/images/service-chauffeur.jpg" alt="Diárias & Carro à Disposição">
+            <div class="service-card-overlay">
+              <span class="service-category-tag">DISPONIBILIDADE</span>
+              <span class="service-number">03</span>
+            </div>
+            <div class="service-icon-floating">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
           </div>
-          <h3>Diárias & Carro à Disposição</h3>
-          <p>
-            Motorista e veículo de luxo dedicados exclusivamente à sua agenda pelo tempo que for necessário. Flexibilidade total para reuniões sucessivas ou compromissos em várias cidades.
-          </p>
-          <ul class="service-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Períodos de 4h, 8h, 12h ou diárias completas</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Espera no local com veículo climatizado</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Rotas flexíveis sob sua orientação</li>
-          </ul>
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20de%20di%C3%A1ria%20com%20motorista%20%C3%A0%20disposi%C3%A7%C3%A3o." target="_blank" class="service-link">
-            Contratar Diária
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </a>
+          <div class="service-card-body">
+            <h3>Diárias & Carro à Disposição</h3>
+            <p>
+              Motorista e veículo executivo exclusivos para cumprir agendas complexas com múltiplos compromissos. Flexibilidade total de paradas e horários com espera no local.
+            </p>
+            <div class="service-pills-list">
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Períodos de 4h, 8h, 12h ou Diária
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Espera com Veículo Climatizado
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Flexibilidade Total de Rota
+              </span>
+            </div>
+            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Di%C3%A1ria%20com%20motorista%20%C3%A0%20disposi%C3%A7%C3%A3o." target="_blank" class="btn-service-action">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+              Solicitar no WhatsApp
+            </a>
+          </div>
         </div>
 
         <!-- Service 4: Intercity Trips -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+        <div class="service-card" data-category="viagens">
+          <div class="service-card-cover">
+            <img src="assets/images/service-highway.jpg" alt="Viagens Interestaduais Privativas">
+            <div class="service-card-overlay">
+              <span class="service-category-tag">INTERESTADUAL</span>
+              <span class="service-number">04</span>
+            </div>
+            <div class="service-icon-floating">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            </div>
           </div>
-          <h3>Viagens Interestaduais Privativas</h3>
-          <p>
-            Translados privativos diretos entre Poços de Caldas e capitais como São Paulo, Rio de Janeiro e Belo Horizonte, sem paradas desnecessárias ou estresse de trânsito.
-          </p>
-          <ul class="service-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Embarque e desembarque porta a porta</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Paradas de conveniência à sua escolha</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Conforto de primeira classe na estrada</li>
-          </ul>
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20viagem%20interestadual." target="_blank" class="service-link">
-            Cotar Viagem
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </a>
+          <div class="service-card-body">
+            <h3>Viagens Interestaduais Privativas</h3>
+            <p>
+              Translados diretos entre Poços de Caldas e capitais como São Paulo, Rio de Janeiro e Belo Horizonte. Viagens tranquilas de primeira classe na estrada, sem paradas desnecessárias.
+            </p>
+            <div class="service-pills-list">
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Embarque & Desembarque Porta a Porta
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Conforto em Longas Distâncias
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Paradas de Conveniência Personalizadas
+              </span>
+            </div>
+            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20para%20Viagem%20Interestadual." target="_blank" class="btn-service-action">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+              Solicitar no WhatsApp
+            </a>
+          </div>
         </div>
 
         <!-- Service 5: Events and Weddings -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        <div class="service-card" data-category="viagens">
+          <div class="service-card-cover">
+            <img src="assets/images/service-event.jpg" alt="Eventos Sociais, Shows & Casamentos">
+            <div class="service-card-overlay">
+              <span class="service-category-tag">EVENTOS & SOCIAL</span>
+              <span class="service-number">05</span>
+            </div>
+            <div class="service-icon-floating">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
           </div>
-          <h3>Eventos Sociais, Shows & Casamentos</h3>
-          <p>
-            Transporte elegante para o dia da noiva, familiares, convidados VIPs, congressos médicos e convenções empresariais realizadas em Poços de Caldas e região.
-          </p>
-          <ul class="service-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Coordenação de frotas e logística completa</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Carro executivo para noivas e ensaios</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Minivans e Vans para traslado de convidados</li>
-          </ul>
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20transporte%20em%20evento%20ou%20casamento." target="_blank" class="service-link">
-            Cotar para Eventos
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </a>
+          <div class="service-card-body">
+            <h3>Eventos Sociais & Casamentos</h3>
+            <p>
+              Logística refinada para casamentos, congressos e grandes eventos. Carro exclusivo para noivas, translados privativos de convidados com vans e total pontualidade.
+            </p>
+            <div class="service-pills-list">
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Carro Executivo para Noivas
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Translado de Convidados em Vans
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Coordenação Completa de Frota
+              </span>
+            </div>
+            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20para%20transporte%20em%20Casamento%20ou%20Evento." target="_blank" class="btn-service-action">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+              Solicitar no WhatsApp
+            </a>
+          </div>
         </div>
 
         <!-- Service 6: City Tour Poços de Caldas -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <div class="service-card" data-category="viagens">
+          <div class="service-card-cover">
+            <img src="assets/images/service-wine.jpg" alt="City Tour Privativo & Enoturismo">
+            <div class="service-card-overlay">
+              <span class="service-category-tag">TURISMO EXCLUSIVO</span>
+              <span class="service-number">06</span>
+            </div>
+            <div class="service-icon-floating">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
           </div>
-          <h3>City Tour Privativo & Enoturismo</h3>
-          <p>
-            Roteiros personalizados pelos pontos mais nobres de Poços de Caldas: Thermas Antônio Carlos, Cristo Redentor, Represa Bortolan, vinícolas de vinhos de inverno e fazendas de café especial.
-          </p>
-          <ul class="service-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Roteiro customizado no seu ritmo</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Motorista com conhecimento dos atrativos locais</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Degustação de vinhos e cafés sem preocupação</li>
-          </ul>
-          <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20um%20roteiro%20personalizado%20de%20City%20Tour%20em%20Po%C3%A7os%20de%20Caldas." target="_blank" class="service-link">
-            Personalizar Tour
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </a>
+          <div class="service-card-body">
+            <h3>City Tour & Rota dos Vinhos</h3>
+            <p>
+              Roteiros privativos pelos cartões-postais de Poços de Caldas: Thermas Antônio Carlos, Cristo, vinícolas de vinhos de inverno e fazendas de café especial com total privacidade e conforto.
+            </p>
+            <div class="service-pills-list">
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Roteiro 100% Personalizado
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Visita a Vinícolas & Cafés Especiais
+              </span>
+              <span class="service-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Degustação Sem Preocupação ao Volante
+              </span>
+            </div>
+            <a href="https://wa.me/5535999990000?text=Ol%C3%A1!%20Gostaria%20de%20um%20roteiro%20personalizado%20de%20City%20Tour%20em%20Po%C3%A7os%20de%20Caldas." target="_blank" class="btn-service-action">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
+              Solicitar no WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -633,133 +633,266 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   SERVICES SECTION
+   SERVICES SECTION (Redesenhado: Visual Premium, Fotos Reais, Filtros & Badges)
    ========================================================================== */
 .services-section {
-  padding: 100px 0;
-  background-color: var(--white);
+  padding: 110px 0;
+  background: radial-gradient(circle at 15% 15%, rgba(0, 168, 150, 0.06) 0%, transparent 45%), 
+              radial-gradient(circle at 85% 85%, rgba(11, 30, 54, 0.05) 0%, transparent 45%), 
+              #F8FAFC;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-header {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+/* Service Category Filter Tabs */
+.services-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.service-filter-btn {
+  background: var(--white);
+  border: 1px solid var(--silver-300);
+  color: var(--navy-850);
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-filter-btn:hover {
+  border-color: var(--teal-500);
+  color: var(--teal-600);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 168, 150, 0.12);
+}
+
+.service-filter-btn.active {
+  background: var(--navy-900);
+  color: var(--teal-300);
+  border-color: var(--teal-400);
+  box-shadow: 0 6px 20px rgba(7, 21, 39, 0.2);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 32px;
 }
 
+/* Service Luxury Card */
 .service-card {
   background: var(--white);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--silver-200);
-  padding: 36px 30px;
+  overflow: hidden;
   transition: var(--transition);
-  position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--navy-850), var(--teal-400));
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  opacity: 0;
-  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(7, 21, 39, 0.04);
+  position: relative;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(7, 21, 39, 0.1);
-  border-color: rgba(0, 168, 150, 0.3);
+  box-shadow: 0 22px 45px rgba(7, 21, 39, 0.12), 0 0 25px rgba(0, 168, 150, 0.15);
+  border-color: var(--teal-400);
 }
 
-.service-card:hover::before {
-  opacity: 1;
+/* Service Card Cover with Real Image */
+.service-card-cover {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: var(--navy-950);
 }
 
-.service-icon-box {
-  width: 60px;
-  height: 60px;
+.service-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-card-cover img {
+  transform: scale(1.08);
+}
+
+.service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.4) 0%, rgba(7, 21, 39, 0.85) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.service-category-tag {
+  background: rgba(7, 21, 39, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 229, 208, 0.4);
+  color: var(--teal-300);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.service-number {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+/* Floating Icon between cover and body */
+.service-icon-floating {
+  position: absolute;
+  bottom: -22px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-850));
+  border: 2px solid var(--teal-400);
   color: var(--teal-300);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
-  box-shadow: 0 8px 20px rgba(7, 21, 39, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  z-index: 5;
   transition: var(--transition);
 }
 
-.service-card:hover .service-icon-box {
+.service-card:hover .service-icon-floating {
   background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
   color: var(--navy-950);
-  transform: rotate(-4deg) scale(1.05);
+  transform: rotate(-6deg) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 168, 150, 0.4);
 }
 
-.service-card h3 {
+/* Service Body Content */
+.service-card-body {
+  padding: 34px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-body h3 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   font-weight: 700;
   color: var(--navy-900);
   margin-bottom: 12px;
+  line-height: 1.35;
+  transition: color 0.3s ease;
 }
 
-.service-card p {
-  font-size: 0.92rem;
+.service-card:hover .service-card-body h3 {
+  color: var(--teal-600);
+}
+
+.service-card-body p {
+  font-size: 0.9rem;
   color: var(--silver-500);
   line-height: 1.6;
   margin-bottom: 20px;
   flex-grow: 1;
 }
 
-.service-features {
+/* Modern Pill Badges for Features */
+.service-pills-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
   padding-top: 14px;
-  border-top: 1px dashed var(--silver-200);
+  border-top: 1px solid var(--silver-200);
 }
 
-.service-features li {
-  font-size: 0.82rem;
-  color: var(--navy-850);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.service-features li svg {
-  color: var(--teal-500);
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
-.service-link {
+.service-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--teal-600);
+  gap: 6px;
+  background: var(--silver-100);
+  color: var(--navy-850);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 168, 150, 0.15);
   transition: var(--transition);
 }
 
-.service-link:hover {
-  color: var(--navy-900);
-  transform: translateX(4px);
+.service-card:hover .service-pill {
+  background: var(--teal-100);
+  color: var(--teal-600);
+  border-color: rgba(0, 168, 150, 0.3);
+}
+
+.service-pill svg {
+  width: 13px;
+  height: 13px;
+  color: var(--teal-500);
+  flex-shrink: 0;
+}
+
+/* Action Button inside Card */
+.btn-service-action {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--navy-900);
+  color: var(--white);
+  border: 1px solid rgba(0, 168, 150, 0.3);
+  transition: var(--transition);
+}
+
+.btn-service-action svg {
+  color: var(--teal-300);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .btn-service-action {
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
+  color: var(--navy-950);
+  border-color: var(--teal-300);
+  box-shadow: 0 6px 20px rgba(0, 168, 150, 0.35);
+}
+
+.service-card:hover .btn-service-action svg {
+  color: var(--navy-950);
+  transform: scale(1.15);
 }
 
 /* ==========================================================================
