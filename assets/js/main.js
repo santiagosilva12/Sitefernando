@@ -341,4 +341,72 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(`https://wa.me/5535999990000?text=${encoded}`, '_blank');
     });
   }
+
+  // ==========================================================================
+  // PROGRESSIVE WEB APP (PWA) - SERVICE WORKER & INSTALL PROMPT
+  // ==========================================================================
+  // 1. Service Worker Registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => {
+          console.log('[PWA] ServiceWorker registrado com sucesso:', reg.scope);
+        })
+        .catch(err => {
+          console.warn('[PWA] Falha ao registrar ServiceWorker:', err);
+        });
+    });
+  }
+
+  // 2. Custom Install Banner Handling
+  let deferredPrompt = null;
+  const pwaInstallBanner = document.getElementById('pwaInstallBanner');
+  const btnPwaInstall = document.getElementById('btnPwaInstall');
+  const btnPwaDismiss = document.getElementById('btnPwaDismiss');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // Check if user previously dismissed in this session
+    if (sessionStorage.getItem('pwa_dismissed') === 'true') {
+      return;
+    }
+
+    // Show the custom install banner with slight delay for smooth appearance
+    if (pwaInstallBanner) {
+      setTimeout(() => {
+        pwaInstallBanner.style.display = 'flex';
+      }, 2500);
+    }
+  });
+
+  if (btnPwaInstall) {
+    btnPwaInstall.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      pwaInstallBanner.style.display = 'none';
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`[PWA] Usuário respondeu ao prompt de instalação: ${outcome}`);
+      deferredPrompt = null;
+    });
+  }
+
+  if (btnPwaDismiss) {
+    btnPwaDismiss.addEventListener('click', () => {
+      if (pwaInstallBanner) {
+        pwaInstallBanner.style.display = 'none';
+        sessionStorage.setItem('pwa_dismissed', 'true');
+      }
+    });
+  }
+
+  window.addEventListener('appinstalled', () => {
+    console.log('[PWA] Aplicativo instalado com sucesso na tela inicial!');
+    if (pwaInstallBanner) {
+      pwaInstallBanner.style.display = 'none';
+    }
+    deferredPrompt = null;
+  });
 });

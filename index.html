@@ -16,7 +16,15 @@
   <meta property="og:image" content="assets/images/logo.png">
   <meta name="theme-color" content="#071527">
 
-  <!-- Favicon -->
+  <!-- PWA & Mobile Web App Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Transp. Executivo">
+  <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/icon-192.png">
   <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
 
   <!-- Fonts: Google Fonts (Montserrat, Plus Jakarta Sans & Playfair Display) -->
@@ -959,6 +967,23 @@
       <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.841.879 2.791.879 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.765-5.768-5.765zm3.385 8.163c-.145.411-.744.757-1.026.787-.278.029-.637.135-2.07-.464-1.724-.72-2.827-2.483-2.912-2.597-.085-.114-.701-.933-.701-1.776 0-.843.439-1.258.596-1.428.156-.17.341-.213.455-.213.114 0 .228.001.328.006.105.006.246-.04.385.293.145.349.497 1.213.54 1.301.043.088.072.19.014.305-.058.115-.087.187-.173.287-.086.1-.181.223-.258.299-.086.085-.176.178-.076.35.1.171.444.733.953 1.186.655.584 1.207.765 1.378.851.171.086.271.072.371-.043.1-.115.428-.499.542-.671.114-.171.228-.143.385-.086.157.057.999.471 1.17.557.171.086.285.128.328.199.043.072.043.414-.102.825z"/></svg>
     </a>
   </div>
+
+  <!-- ==========================================================================
+       PWA INSTALL PROMPT BANNER
+       ========================================================================== -->
+  <aside class="pwa-install-banner" id="pwaInstallBanner" aria-label="Instalar Aplicativo" style="display: none;">
+    <div class="pwa-install-content">
+      <img src="assets/images/icons/icon-192.png" alt="App Icon" class="pwa-install-icon">
+      <div class="pwa-install-text">
+        <strong>Transporte Executivo</strong>
+        <span>Instale o app para acesso rápido e direto</span>
+      </div>
+    </div>
+    <div class="pwa-install-actions">
+      <button type="button" class="btn-pwa-install" id="btnPwaInstall">Instalar App</button>
+      <button type="button" class="btn-pwa-dismiss" id="btnPwaDismiss" aria-label="Fechar">&times;</button>
+    </div>
+  </aside>
 
   <!-- Main JavaScript File -->
   <script src="assets/js/main.js"></script>
