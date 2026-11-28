@@ -4,13 +4,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Adjust hero background video speed for natural, dynamic executive motion
+  // Maintain the natural original rhythm and pace of the hero background video
   const heroVideo = document.querySelector('.hero-video-bg video');
   if (heroVideo) {
-    heroVideo.playbackRate = 1.35;
-    heroVideo.addEventListener('play', () => {
-      heroVideo.playbackRate = 1.35;
-    });
+    heroVideo.playbackRate = 1.0;
   }
 
   // Language Selector (PT | EN | ES)
