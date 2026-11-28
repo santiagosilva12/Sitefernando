@@ -401,7 +401,8 @@ button, input, select, textarea {
   background: radial-gradient(circle at 65% 35%, rgba(7, 21, 39, 0.22) 0%, rgba(4, 13, 24, 0.72) 80%);
 }
 
-.hero .container {
+.hero .container,
+.hero .container-wide {
   position: relative;
   z-index: 2;
 }
@@ -411,40 +412,41 @@ button, input, select, textarea {
 }
 
 .hero-f-pattern {
-  max-width: 760px;
+  max-width: 1120px;
   text-align: left;
 }
 
 .hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(0, 168, 150, 0.15);
-  border: 1px solid rgba(0, 229, 208, 0.4);
+  gap: 10px;
+  background: rgba(0, 168, 150, 0.18);
+  border: 1px solid rgba(0, 229, 208, 0.45);
   color: var(--teal-300);
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 3.3rem;
-  line-height: 1.15;
+  font-size: clamp(2.7rem, 4.4vw, 4.4rem);
+  line-height: 1.14;
   font-weight: 800;
-  margin-bottom: 22px;
-  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  letter-spacing: -0.6px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
 }
 
 .hero-title-br {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero-title-br {
     display: inline;
   }
@@ -457,11 +459,12 @@ button, input, select, textarea {
 }
 
 .hero-description {
-  font-size: 1.15rem;
-  color: var(--silver-200);
+  font-size: 1.28rem;
+  color: #f1f5f9;
   line-height: 1.7;
-  margin-bottom: 28px;
-  max-width: 720px;
+  margin-bottom: 34px;
+  max-width: 880px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
 /* F-Pattern Horizontal Scanning Highlights */
@@ -501,16 +504,29 @@ button, input, select, textarea {
 .hero-buttons {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.btn-hero-main {
+  padding: 18px 38px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 168, 150, 0.45);
+}
+
+.hero-buttons .btn-outline-light {
+  padding: 18px 32px;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .hero-microcopy {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.86rem;
+  font-size: 0.95rem;
   color: var(--silver-300);
   font-weight: 500;
   letter-spacing: 0.2px;
