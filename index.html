@@ -86,6 +86,21 @@
           <span class="btn-contact-text">Fale conosco</span>
         </a>
 
+        <!-- Seletor de Idioma Compacto no Mobile (PT ⌵) -->
+        <div class="mobile-lang-dropdown" id="mobileLangDropdown">
+          <button type="button" class="mobile-lang-trigger" id="mobileLangTrigger" aria-label="Seletor de idioma" aria-expanded="false">
+            <span class="active-lang-code" id="activeLangCode">PT</span>
+            <svg class="chevron-icon" width="9" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4"/>
+            </svg>
+          </button>
+          <div class="mobile-lang-popover" id="mobileLangPopover">
+            <button type="button" class="mobile-lang-opt active" data-lang="pt">PT</button>
+            <button type="button" class="mobile-lang-opt" data-lang="en">EN</button>
+            <button type="button" class="mobile-lang-opt" data-lang="es">ES</button>
+          </div>
+        </div>
+
         <!-- Ícone WhatsApp no Mobile (Linha fina 1.5px, sem fundo) -->
         <a href="https://wa.me/553591215394?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20transporte%20executivo." target="_blank" class="mobile-wa-icon" aria-label="Fale conosco pelo WhatsApp">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -106,12 +121,11 @@
        HERO SECTION (Minimalista, Fino & Elegante)
        ========================================================================== -->
   <section class="hero" id="inicio">
-    <!-- Minimalist Executive Background (Vídeo no Desktop, Imagem .webp no Mobile) -->
+    <!-- Minimalist Executive Background (Vídeo com Cortina Fosca) -->
     <div class="hero-video-bg">
-      <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero.jpg" class="hero-desktop-video">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero.jpg">
         <source src="assets/videos/hero-bg.mp4?v=4" type="video/mp4">
       </video>
-      <img src="assets/images/hero-mobile.webp" alt="Estrada executiva em Poços de Caldas" class="hero-mobile-img" loading="eager" decoding="async">
       <div class="hero-video-overlay"></div>
     </div>
 

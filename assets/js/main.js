@@ -64,11 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Language Selector (PT | EN | ES - sincronizado desktop e drawer mobile)
-  const allLangButtons = document.querySelectorAll('.lang-btn, .drawer-lang-btn');
+  // Language Selector (PT | EN | ES - sincronizado desktop, drawer e mobile dropdown)
+  const allLangButtons = document.querySelectorAll('.lang-btn, .drawer-lang-btn, .mobile-lang-opt');
+  const activeLangCode = document.getElementById('activeLangCode');
+  const mobileLangDropdown = document.getElementById('mobileLangDropdown');
+  const mobileLangTrigger = document.getElementById('mobileLangTrigger');
+
+  if (mobileLangTrigger && mobileLangDropdown) {
+    mobileLangTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileLangDropdown.classList.toggle('open');
+      mobileLangTrigger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileLangDropdown.contains(e.target)) {
+        mobileLangDropdown.classList.remove('open');
+        mobileLangTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   allLangButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const lang = btn.getAttribute('data-lang');
+      if (activeLangCode) {
+        activeLangCode.textContent = lang.toUpperCase();
+      }
+      if (mobileLangDropdown) {
+        mobileLangDropdown.classList.remove('open');
+        if (mobileLangTrigger) mobileLangTrigger.setAttribute('aria-expanded', 'false');
+      }
+
       allLangButtons.forEach(b => {
         if (b.getAttribute('data-lang') === lang) {
           b.classList.add('active');
