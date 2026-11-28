@@ -1548,8 +1548,8 @@ button, input, select, textarea {
 
 .real-places-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   margin-top: 45px;
   width: 100%;
 }
@@ -1594,17 +1594,17 @@ button, input, select, textarea {
 
 .real-place-overlay h4 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.2px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .real-places-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 20px;
   }
   .real-place-item {
     height: 340px;
@@ -1614,7 +1614,7 @@ button, input, select, textarea {
 @media (max-width: 640px) {
   .real-places-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
   .real-place-item {
     height: 290px;
