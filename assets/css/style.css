@@ -1549,8 +1549,9 @@ button, input, select, textarea {
 .real-places-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
   margin-top: 45px;
+  width: 100%;
 }
 
 .real-place-item {
@@ -1560,7 +1561,7 @@ button, input, select, textarea {
   box-shadow: var(--shadow-md);
   border: 1px solid var(--silver-200);
   background: var(--navy-950);
-  height: 320px;
+  height: 380px;
   transition: var(--transition);
 }
 
@@ -1586,35 +1587,41 @@ button, input, select, textarea {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(7, 21, 39, 0.94) 80%);
-  padding: 24px 20px 18px;
+  background: linear-gradient(180deg, transparent 0%, rgba(7, 21, 39, 0.92) 75%);
+  padding: 32px 24px 22px;
   color: var(--white);
-}
-
-.real-place-tag {
-  display: block;
-  background: transparent;
-  border: none;
-  color: var(--teal-300);
-  font-size: 0.74rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 0;
-  margin-bottom: 4px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .real-place-overlay h4 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin: 0;
+  letter-spacing: -0.2px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-.real-place-overlay p {
-  font-size: 0.82rem;
-  color: var(--silver-300);
+@media (max-width: 1100px) {
+  .real-places-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .real-place-item {
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .real-places-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .real-place-item {
+    height: 290px;
+  }
+  .real-place-overlay h4 {
+    font-size: 1.1rem;
+  }
 }
 
 .routes-grid {
