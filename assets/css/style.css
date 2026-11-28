@@ -388,8 +388,11 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.55;
-  filter: brightness(0.95) contrast(1.05);
+  opacity: 0.88;
+  filter: contrast(1.04) brightness(1.02);
+  transform: scale(1.22);
+  transform-origin: center center;
+  transition: opacity 0.5s ease;
 }
 
 .hero-video-overlay {
@@ -398,7 +401,7 @@ button, input, select, textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 65% 35%, rgba(7, 21, 39, 0.22) 0%, rgba(4, 13, 24, 0.72) 80%);
+  background: linear-gradient(90deg, rgba(7, 21, 39, 0.68) 0%, rgba(7, 21, 39, 0.32) 48%, rgba(7, 21, 39, 0.08) 100%);
 }
 
 .hero .container,
