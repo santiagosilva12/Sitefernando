@@ -175,7 +175,7 @@ button, input, select, textarea {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 88px;
   z-index: 1000;
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -185,7 +185,7 @@ button, input, select, textarea {
 }
 
 .header.scrolled {
-  height: 64px;
+  height: 68px;
   background: rgba(7, 21, 39, 0.96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -224,16 +224,15 @@ button, input, select, textarea {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
   margin-left: 56px;
   margin-right: auto;
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 14.5px;
-  font-weight: 500;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  color: var(--silver-300);
+  font-size: 0.95rem;
+  font-weight: 400;
   position: relative;
   padding: 6px 0;
 }
@@ -250,9 +249,8 @@ button, input, select, textarea {
   border-radius: 2px;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: var(--teal-300);
+.nav-link:hover {
+  color: var(--white);
 }
 
 .nav-link:hover::after,
@@ -272,12 +270,11 @@ button, input, select, textarea {
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.50);
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
-  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--white);
+  padding: 10px 20px;
   border-radius: var(--radius-full);
-  font-size: 14px;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -287,7 +284,7 @@ button, input, select, textarea {
 }
 
 .btn-header-contact .wa-outline-icon {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--white);
   transition: color 0.3s ease;
   flex-shrink: 0;
 }
@@ -296,7 +293,6 @@ button, input, select, textarea {
   border-color: var(--teal-300);
   color: var(--teal-300);
   background: rgba(18, 184, 161, 0.10);
-  text-shadow: none;
   transform: none;
 }
 
@@ -308,8 +304,8 @@ button, input, select, textarea {
 .lang-selector {
   display: inline-flex;
   align-items: center;
-  background: rgba(14, 32, 57, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(14, 32, 57, 0.6);
+  border: 1px solid rgba(0, 229, 208, 0.3);
   padding: 4px 10px;
   border-radius: var(--radius-full);
   gap: 6px;
@@ -318,11 +314,10 @@ button, input, select, textarea {
 .lang-btn {
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  color: var(--silver-400);
   font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 0.76rem;
+  font-weight: 700;
   letter-spacing: 0.8px;
   cursor: pointer;
   padding: 3px 6px;
@@ -519,13 +514,13 @@ button, input, select, textarea {
   position: relative;
   background-color: var(--navy-950);
   color: var(--white);
-  padding: 140px 0 60px;
+  padding: 108px 0 54px;
   overflow: hidden;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-video-bg {
@@ -536,19 +531,6 @@ button, input, select, textarea {
   height: 100%;
   overflow: hidden;
   z-index: 0;
-}
-
-/* Degradê escuro no topo atrás do header para legibilidade do menu */
-.hero-video-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0) 100%);
-  pointer-events: none;
-  z-index: 1;
 }
 
 .hero-video-bg video {
@@ -628,7 +610,7 @@ button, input, select, textarea {
   color: var(--teal-300);
   padding: 0;
   border-radius: 0;
-  font-size: 11.5px;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -638,11 +620,11 @@ button, input, select, textarea {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 3.4vw, 3.25rem);
-  line-height: 1.08;
-  font-weight: 600;
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.2rem, 3.8vw, 3.55rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 22px;
+  letter-spacing: -0.5px;
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
   animation-delay: 0.25s;
 }
@@ -650,13 +632,13 @@ button, input, select, textarea {
 .hero-line {
   display: block;
   white-space: nowrap;
-  line-height: 1.08;
+  line-height: 1.1;
 }
 
 .hero-title span.highlight {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.08em;
   line-height: 1;
   vertical-align: baseline;
@@ -690,38 +672,36 @@ button, input, select, textarea {
 }
 
 .hero-sub-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   animation-delay: 0.40s;
 }
 
 .hero-sub-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 12px 0;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 10px;
 }
 
 .hero-sub-list li {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--white);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-sub-list .check-icon {
   color: var(--teal-300);
-  width: 15px;
-  height: 15px;
   flex-shrink: 0;
 }
 
 .hero-subline {
-  font-size: 14px;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.70);
   line-height: 1.5;
   margin: 12px 0 0 0;
@@ -738,26 +718,22 @@ button, input, select, textarea {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 0;
+  margin-bottom: 14px;
 }
 
 .btn-hero-main {
-  padding: 14px 28px;
-  font-size: 15px;
-  font-weight: 600;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-}
-
-.btn-hero-main:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  padding: 18px 38px;
+  font-size: 1.12rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 168, 150, 0.45);
 }
 
 .hero-link-secondary {
   background: transparent;
   border: none;
   color: var(--white);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   padding: 12px 6px;
   display: inline-flex;
   align-items: center;
@@ -772,6 +748,21 @@ button, input, select, textarea {
   text-underline-offset: 4px;
 }
 
+.hero-microcopy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--silver-300);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.hero-microcopy svg {
+  color: #25D366;
+  flex-shrink: 0;
+}
+
 /* Faixa de Destaques (Vidro Fosco no Rodapé do Hero) */
 .hero-highlights-bar {
   display: flex;
@@ -782,9 +773,9 @@ button, input, select, textarea {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: var(--radius-md);
-  padding: 14px 24px;
-  margin-top: 48px;
-  max-width: 880px;
+  padding: 16px 26px;
+  margin-top: 40px;
+  max-width: 960px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   animation-delay: 0.70s;
 }
@@ -792,20 +783,18 @@ button, input, select, textarea {
 .hero-highlight-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex: 1;
   justify-content: center;
 }
 
 .hero-highlight-item .highlight-icon {
   color: var(--teal-300);
-  width: 16px;
-  height: 16px;
   flex-shrink: 0;
 }
 
 .hero-highlight-item .highlight-text {
-  font-size: 13px;
+  font-size: 0.88rem;
   color: var(--white);
   font-weight: 500;
   white-space: nowrap;
@@ -1405,10 +1394,10 @@ button, input, select, textarea {
 }
 
 .container-wide {
-  max-width: 1440px;
-  width: 100%;
+  max-width: 1760px;
+  width: 96%;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 0 20px;
 }
 
 .fleet-grid-slim {
@@ -2502,6 +2491,9 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .hero-title {
+    font-size: 2.6rem;
+  }
   .about-grid, .why-grid {
     grid-template-columns: 1fr;
   }
@@ -2516,9 +2508,6 @@ button, input, select, textarea {
 @media (max-width: 768px) {
   .topbar {
     display: none;
-  }
-  .container-wide {
-    padding: 0 24px;
   }
   .header {
     height: 70px;
@@ -2577,7 +2566,7 @@ button, input, select, textarea {
     display: block;
   }
   .hero {
-    padding: 100px 0 50px;
+    padding: 85px 0 50px;
     min-height: auto;
   }
   .hero-f-pattern {
@@ -2585,8 +2574,8 @@ button, input, select, textarea {
     width: 100%;
   }
   .hero-title {
-    font-size: clamp(1.85rem, 6.2vw, 2.05rem);
-    line-height: 1.18;
+    font-size: clamp(1.65rem, 6.8vw, 2.1rem);
+    line-height: 1.22;
     word-break: break-word;
   }
   .hero-line {
@@ -2594,17 +2583,17 @@ button, input, select, textarea {
     white-space: normal;
   }
   .hero-sub-list {
-    gap: 6px;
-    margin-bottom: 0;
+    gap: 8px;
+    margin-bottom: 12px;
   }
   .hero-sub-list li {
-    font-size: 14px;
+    font-size: 0.95rem;
     gap: 8px;
   }
   .hero-subline {
-    font-size: 13px;
+    font-size: 0.88rem;
     line-height: 1.45;
-    margin-top: 8px;
+    margin-top: 10px;
   }
   .hero-buttons {
     flex-direction: column;
@@ -2616,21 +2605,24 @@ button, input, select, textarea {
     width: 100%;
     justify-content: center;
     text-align: center;
-    padding: 13px 20px;
-    font-size: 14.5px;
+    padding: 15px 20px;
+    font-size: 1rem;
   }
   .hero-link-secondary {
     width: 100%;
     justify-content: center;
     text-align: center;
     padding: 10px 0;
-    font-size: 14.5px;
+  }
+  .hero-microcopy {
+    justify-content: center;
+    text-align: center;
   }
   .hero-highlights-bar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px 10px;
-    padding: 12px 16px;
+    gap: 14px 10px;
+    padding: 16px;
     max-width: 100%;
     margin-top: 28px;
   }
@@ -2641,12 +2633,8 @@ button, input, select, textarea {
     justify-content: flex-start;
     gap: 8px;
   }
-  .hero-highlight-item .highlight-icon {
-    width: 15px;
-    height: 15px;
-  }
   .hero-highlight-item .highlight-text {
-    font-size: 12px;
+    font-size: 0.8rem;
     white-space: normal;
   }
   .hero-f-benefits {
