@@ -1,5 +1,5 @@
 // Service Worker - Transporte Executivo Poços de Caldas (PWA)
-const CACHE_NAME = 'transporte-executivo-v1.0.2';
+const CACHE_NAME = 'transporte-executivo-v1.0.3';
 
 const PRECACHE_ASSETS = [
   './',
@@ -10,6 +10,7 @@ const PRECACHE_ASSETS = [
   './assets/images/logo-white.svg',
   './assets/images/logo-transparent.png',
   './assets/images/hero.jpg',
+  './assets/images/hero-mobile.webp',
   './assets/images/icons/icon-192.png',
   './assets/images/icons/icon-512.png',
   './assets/images/icons/apple-touch-icon.png',

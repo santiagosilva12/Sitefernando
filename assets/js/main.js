@@ -16,19 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
       items: ['Transfers para aeroportos', 'Viagens corporativas', 'Diárias com motorista'],
       subline: 'Sul de Minas e São Paulo · Um só contato, do orçamento ao desembarque.',
       highlights: ['Atendimento 24h', 'Motoristas credenciados', 'Sul de Minas e São Paulo', 'Monitoramento de voo'],
-      contactBtn: 'Fale conosco'
+      contactBtn: 'Fale conosco',
+      mobileDesc: 'Transfers, viagens corporativas e diárias com motorista.'
     },
     en: {
       items: ['Airport transfers', 'Corporate travel', 'Chauffeur by the day'],
       subline: 'Southern Minas Gerais and São Paulo · One contact, from quote to drop-off.',
       highlights: ['24/7 service', 'Vetted chauffeurs', 'Southern Minas & São Paulo', 'Flight monitoring'],
-      contactBtn: 'Contact us'
+      contactBtn: 'Contact us',
+      mobileDesc: 'Airport transfers, corporate travel, and chauffeur by the day.'
     },
     es: {
       items: ['Traslados al aeropuerto', 'Viajes corporativos', 'Chofer por día'],
       subline: 'Sur de Minas Gerais y São Paulo · Un solo contacto, del presupuesto al destino.',
       highlights: ['Atención 24h', 'Choferes acreditados', 'Sur de Minas y São Paulo', 'Monitoreo de vuelos'],
-      contactBtn: 'Contáctenos'
+      contactBtn: 'Contáctenos',
+      mobileDesc: 'Traslados al aeropuerto, viajes corporativos y chofer por día.'
     }
   };
 
@@ -36,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = heroTranslations[lang] || heroTranslations.pt;
     const subList = document.getElementById('heroSubList');
     const subline = document.getElementById('heroSubline');
+    const mobileDesc = document.querySelector('.hero-mobile-desc');
+    if (mobileDesc && data.mobileDesc) {
+      mobileDesc.textContent = data.mobileDesc;
+    }
     if (subList) {
       const items = subList.querySelectorAll('li span');
       items.forEach((span, index) => {
@@ -57,13 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Language Selector (PT | EN | ES)
-  const langButtons = document.querySelectorAll('.lang-btn');
-  langButtons.forEach(btn => {
+  // Language Selector (PT | EN | ES - sincronizado desktop e drawer mobile)
+  const allLangButtons = document.querySelectorAll('.lang-btn, .drawer-lang-btn');
+  allLangButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      langButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
       const lang = btn.getAttribute('data-lang');
+      allLangButtons.forEach(b => {
+        if (b.getAttribute('data-lang') === lang) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
       updateHeroLang(lang);
 
       if (lang === 'en') {
@@ -133,6 +145,29 @@ document.addEventListener('DOMContentLoaded', () => {
       header?.classList.remove('scrolled');
     }
   });
+
+  // Floating WhatsApp visibility on mobile (hide during Hero, show after scroll)
+  const floatingWa = document.querySelector('.floating-whatsapp');
+  const heroSection = document.getElementById('inicio');
+
+  const checkFloatingWaVisibility = () => {
+    if (window.innerWidth <= 768) {
+      const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 500;
+      if (heroBottom > 80) {
+        // Hero is visible on mobile screen -> hide floating button
+        floatingWa?.classList.add('mobile-hidden');
+      } else {
+        // Scrolled past hero -> show floating button
+        floatingWa?.classList.remove('mobile-hidden');
+      }
+    } else {
+      floatingWa?.classList.remove('mobile-hidden');
+    }
+  };
+
+  window.addEventListener('scroll', checkFloatingWaVisibility, { passive: true });
+  window.addEventListener('resize', checkFloatingWaVisibility);
+  checkFloatingWaVisibility();
 
   // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');

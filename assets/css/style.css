@@ -628,12 +628,32 @@ video::-webkit-media-controls-play-button {
   animation-delay: 0.10s;
 }
 
-.hero-tag .tag-part {
+.hero-tag .tag-desktop {
   display: inline;
 }
 
-.hero-tag .tag-sep {
-  display: inline;
+.hero-tag .tag-mobile {
+  display: none;
+}
+
+.hero-mobile-desc {
+  display: none;
+}
+
+.hero-mobile-img {
+  display: none;
+}
+
+.hero-desktop-video {
+  display: block;
+}
+
+.mobile-wa-icon {
+  display: none;
+}
+
+.mobile-drawer-lang {
+  display: none;
 }
 
 .hero-title {
@@ -2628,180 +2648,330 @@ video::-webkit-media-controls-play-button {
   }
 }
 
-/* Celulares e Smartphones (<= 768px) */
+/* Celulares e Smartphones (<= 768px) - Versão Minimalista, Fina & Elegante */
 @media (max-width: 768px) {
   .topbar {
     display: none;
   }
+
+  /* 4. HEADER NO MOBILE (Transparente, 64px, 20px padding, apenas logo e 2 ícones de linha fina) */
   .header {
-    height: 70px;
+    height: 64px;
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
   }
   .header.scrolled {
     height: 60px;
+    background: rgba(7, 21, 39, 0.95) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  }
+  .navbar {
+    padding: 0 20px !important;
   }
   .brand-logo img {
-    height: 44px;
+    height: 40px !important;
     width: auto;
     object-fit: contain;
   }
   .header.scrolled .brand-logo img {
-    height: 38px;
+    height: 36px !important;
   }
-  .nav-actions {
-    gap: 10px;
+  .lang-selector {
+    display: none !important;
   }
   .btn-header-contact {
-    width: 38px;
-    height: 38px;
-    padding: 8px;
+    display: none !important;
   }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .mobile-wa-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 4px;
+    line-height: 1;
+    transition: opacity 0.2s ease;
+  }
+  .mobile-wa-icon:hover {
+    opacity: 0.8;
+  }
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 4px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* Drawer Mobile (Menu aberto com PT · EN · ES no rodapé) */
   .nav-links {
-    top: 70px;
-    padding: 20px 16px;
-    max-height: calc(100vh - 70px);
+    top: 64px;
+    padding: 24px 20px;
+    max-height: calc(100vh - 64px);
+    background: rgba(7, 21, 39, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
   .header.scrolled .nav-links {
     top: 60px;
     max-height: calc(100vh - 60px);
   }
-
-  /* 1. VÍDEO NO MOBILE */
-  .hero-video-bg video {
-    object-fit: cover;
-    object-position: 70% center;
-    animation: none !important;
-    transform: scale(1.0) !important;
-  }
-  .hero-video-overlay {
-    background: rgba(0, 0, 0, 0.55);
-  }
-
-  /* 2. SELO */
-  .hero-tag {
-    font-size: 10.5px;
-    letter-spacing: 0.12em;
-    line-height: 1.45;
-    margin-bottom: 14px;
-    display: inline-block;
-  }
-  .hero-tag .tag-part {
-    display: block;
-  }
-  .hero-tag .tag-sep {
-    display: none;
-  }
-
-  /* 6. ESPAÇAMENTO DO HERO */
-  .hero {
-    padding-top: 95px;
-    padding-bottom: 95px;
-    padding-left: 20px;
-    padding-right: 20px;
-    min-height: 100svh;
-    min-height: 100dvh;
+  .mobile-drawer-lang {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .hero .container-wide {
-    padding: 0 !important;
-    width: 100%;
-  }
-  .hero-content-container {
-    padding: 0 !important;
-    width: 100%;
-  }
-  .hero-f-pattern {
-    max-width: 100%;
-    width: 100%;
-  }
-  .hero-title {
-    font-size: clamp(1.75rem, 6.5vw, 2.25rem);
-    line-height: 1.18;
-    word-break: break-word;
-    margin-bottom: 18px;
-  }
-  .hero-line {
-    display: inline;
-    white-space: normal;
-  }
-  .hero-sub-list {
-    gap: 8px;
-    margin-bottom: 12px;
-  }
-  .hero-sub-list li {
-    font-size: 0.95rem;
-    gap: 8px;
-  }
-  .hero-subline {
+  .drawer-lang-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-heading);
     font-size: 0.85rem;
-    line-height: 1.45;
-    margin-top: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+  }
+  .drawer-lang-btn.active {
+    color: var(--teal-300);
+    font-weight: 700;
+  }
+  .drawer-lang-sep {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
   }
 
-  /* BOTÕES DO HERO */
+  /* 1 & 2. FUNDO E LAYOUT DO HERO NO MOBILE */
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+    padding: 0 24px 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: stretch !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-desktop-video {
+    display: none !important;
+  }
+  .hero-mobile-img {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+    z-index: 0;
+  }
+  .hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.45) 60%, rgba(0, 0, 0, 0.85) 100%) !important;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-content-container {
+    width: 100%;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-f-pattern {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin-top: auto;
+  }
+
+  /* 3a. Selo em uma linha só */
+  .hero-tag {
+    font-size: 10px !important;
+    letter-spacing: 0.2em !important;
+    line-height: 1.2 !important;
+    font-weight: 500 !important;
+    color: var(--teal-300) !important;
+    text-transform: uppercase;
+    margin-bottom: 12px !important;
+    display: block;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  .hero-tag .tag-desktop {
+    display: none !important;
+  }
+  .hero-tag .tag-mobile {
+    display: inline !important;
+  }
+
+  /* 3b. Título fino, minimalista e elegante */
+  .hero-title {
+    font-size: 1.85rem !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    color: var(--white) !important;
+    margin-bottom: 0 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .hero-line {
+    display: inline !important;
+    white-space: normal !important;
+  }
+  .hero-title span.highlight {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 500 !important;
+    font-size: 1.05em;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: initial !important;
+    color: var(--teal-300) !important;
+    animation: none !important;
+  }
+
+  /* 3c. Linha de apoio única */
+  .hero-mobile-desc {
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    margin-top: 14px !important;
+    margin-bottom: 0;
+    line-height: 1.45;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  .hero-sub-list {
+    display: none !important;
+  }
+  .hero-subline {
+    display: none !important;
+  }
+
+  /* 3d. Botões */
+  .hero-cta-group {
+    margin-top: 28px !important;
+    width: 100%;
+  }
   .hero-buttons {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    gap: 12px;
+    gap: 0;
     margin-bottom: 0;
   }
   .btn-hero-main {
     width: 100%;
+    height: 50px;
+    border-radius: 999px !important;
+    background: var(--teal-500) !important;
+    color: var(--white) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 14px 20px;
-    font-size: 0.98rem;
+    gap: 10px;
+    border: none !important;
     margin: 0;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .btn-hero-main:hover {
+    background: var(--teal-400) !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .btn-hero-main .wa-btn-icon-fine {
+    color: var(--white);
+    flex-shrink: 0;
   }
   .hero-link-secondary {
+    display: block !important;
     width: 100%;
-    justify-content: center;
     text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: 0.95rem;
-    display: inline-flex;
-    align-items: center;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.80) !important;
+    margin-top: 14px !important;
+    padding: 0 !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .hero-link-secondary:hover {
+    color: var(--white) !important;
+    text-decoration: none;
   }
 
-  /* 4. FAIXA DE DESTAQUES NO MOBILE (Grade 2x2 com textos que nunca cortam) */
+  /* 3e. Remover faixa de destaques no hero no mobile */
   .hero-highlights-bar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 14px;
-    max-width: 100%;
-    margin-top: 28px;
-    box-sizing: border-box;
-  }
-  .hero-highlight-divider {
-    display: none;
-  }
-  .hero-highlight-item {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-    text-align: left;
-    min-width: 0;
-  }
-  .hero-highlight-item .highlight-icon {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .hero-highlight-item .highlight-text {
-    font-size: 12px;
-    white-space: normal;
-    line-height: 1.35;
-    text-align: left;
-    word-break: normal;
-    overflow-wrap: break-word;
-    display: block;
+    display: none !important;
   }
 
+  /* 5. BOTÃO FLUTUANTE DO WHATSAPP NO MOBILE (Escondido no hero, aparece depois com 48px) */
+  .floating-whatsapp {
+    bottom: 24px;
+    right: 20px;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  }
+  .floating-whatsapp.mobile-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(20px) scale(0.9) !important;
+  }
+  .whatsapp-bubble {
+    display: none !important;
+  }
+  .whatsapp-btn {
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  }
+  .whatsapp-btn::before {
+    display: none !important;
+  }
+  .whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Demais seções mobile */
   .about-section,
   .steps-section,
   .real-places-section,
@@ -2848,17 +3018,6 @@ video::-webkit-media-controls-play-button {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .whatsapp-bubble {
-    display: none !important;
-  }
-  .floating-whatsapp {
-    bottom: 20px;
-    right: 20px;
-  }
-  .whatsapp-btn {
-    width: 54px;
-    height: 54px;
-  }
 }
 
 /* Celulares Menores (<= 480px, e.g. iPhone, Galaxy) */
@@ -2866,58 +3025,11 @@ video::-webkit-media-controls-play-button {
   .container {
     padding: 0 16px;
   }
-  .header {
-    height: 66px;
-  }
-  .header.scrolled {
-    height: 58px;
-  }
-  .brand-logo img {
-    height: 44px;
-  }
-  .header.scrolled .brand-logo img {
-    height: 38px;
-  }
-  .nav-actions {
-    gap: 8px;
-  }
-  .lang-selector {
-    padding: 3px 6px;
-    gap: 3px;
-  }
-  .lang-btn {
-    font-size: 0.70rem;
-    padding: 2px 4px;
-    letter-spacing: 0.4px;
-  }
-  .btn-header-contact {
-    width: 36px;
-    height: 36px;
-  }
-  .mobile-toggle {
-    width: 36px;
-    height: 36px;
-  }
-  .nav-links {
-    top: 66px;
-    max-height: calc(100vh - 66px);
-  }
-  .header.scrolled .nav-links {
-    top: 58px;
-    max-height: calc(100vh - 58px);
+  .hero {
+    padding: 0 20px 36px !important;
   }
   .hero-title {
-    font-size: clamp(1.55rem, 6.2vw, 1.95rem);
-    line-height: 1.16;
-  }
-  .hero-title span.highlight {
-    font-size: 1.05em;
-  }
-  .hero-sub-list li {
-    font-size: 0.88rem;
-  }
-  .hero-subline {
-    font-size: 0.80rem;
+    font-size: 1.75rem !important;
   }
   .section-title {
     font-size: 1.65rem;
@@ -2926,37 +3038,12 @@ video::-webkit-media-controls-play-button {
   .section-subtitle {
     font-size: 0.92rem;
   }
-  .floating-whatsapp {
-    bottom: 18px;
-    right: 18px;
-  }
-  .whatsapp-btn {
-    width: 52px;
-    height: 52px;
-  }
-  .whatsapp-btn svg {
-    width: 28px;
-    height: 28px;
-  }
 }
 
 /* Telas Ultra-Pequenas (<= 360px) */
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 1.45rem;
-  }
-  .brand-logo img {
-    height: 44px;
-  }
-  .header.scrolled .brand-logo img {
-    height: 38px;
-  }
-  .hero-highlights-bar {
-    gap: 8px;
-    padding: 12px 10px;
-  }
-  .hero-highlight-item .highlight-text {
-    font-size: 11px;
+    font-size: 1.6rem !important;
   }
 }
 
