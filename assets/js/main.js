@@ -10,19 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
     heroVideo.playbackRate = 1.0;
   }
 
-  // Hero Subtitle Multilingual Content
+  // Hero Multilingual Content (Subtitle & Highlights Bar)
   const heroTranslations = {
     pt: {
       items: ['Transfers para aeroportos', 'Viagens corporativas', 'Diárias com motorista'],
-      subline: 'Sul de Minas e São Paulo · Um só contato, do orçamento ao desembarque.'
+      subline: 'Sul de Minas e São Paulo · Um só contato, do orçamento ao desembarque.',
+      highlights: ['Atendimento 24h', 'Motoristas credenciados', 'Sul de Minas e São Paulo', 'Monitoramento de voo']
     },
     en: {
       items: ['Airport transfers', 'Corporate travel', 'Chauffeur by the day'],
-      subline: 'Southern Minas Gerais and São Paulo · One contact, from quote to drop-off.'
+      subline: 'Southern Minas Gerais and São Paulo · One contact, from quote to drop-off.',
+      highlights: ['24/7 service', 'Vetted chauffeurs', 'Southern Minas & São Paulo', 'Flight monitoring']
     },
     es: {
       items: ['Traslados al aeropuerto', 'Viajes corporativos', 'Chofer por día'],
-      subline: 'Sur de Minas Gerais y São Paulo · Un solo contacto, del presupuesto al destino.'
+      subline: 'Sur de Minas Gerais y São Paulo · Un solo contacto, del presupuesto al destino.',
+      highlights: ['Atención 24h', 'Choferes acreditados', 'Sur de Minas y São Paulo', 'Monitoreo de vuelos']
     }
   };
 
@@ -38,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subline) {
       subline.textContent = data.subline;
+    }
+    const highlightTexts = document.querySelectorAll('.hero-highlights-bar .highlight-text');
+    if (highlightTexts.length && data.highlights) {
+      highlightTexts.forEach((el, index) => {
+        if (data.highlights[index]) el.textContent = data.highlights[index];
+      });
     }
   };
 
@@ -90,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header Scroll Effect (Navbar shadow on scroll)
+  // Header Scroll Effect (Navbar background and compact height on scroll)
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 50) {
       header?.classList.add('scrolled');
     } else {
       header?.classList.remove('scrolled');
