@@ -10,6 +10,37 @@ document.addEventListener('DOMContentLoaded', () => {
     heroVideo.playbackRate = 1.0;
   }
 
+  // Hero Subtitle Multilingual Content
+  const heroTranslations = {
+    pt: {
+      items: ['Transfers para aeroportos', 'Viagens corporativas', 'Diárias com motorista'],
+      subline: 'Sul de Minas e São Paulo · Um só contato, do orçamento ao desembarque.'
+    },
+    en: {
+      items: ['Airport transfers', 'Corporate travel', 'Chauffeur by the day'],
+      subline: 'Southern Minas Gerais and São Paulo · One contact, from quote to drop-off.'
+    },
+    es: {
+      items: ['Traslados al aeropuerto', 'Viajes corporativos', 'Chofer por día'],
+      subline: 'Sur de Minas Gerais y São Paulo · Un solo contacto, del presupuesto al destino.'
+    }
+  };
+
+  const updateHeroLang = (lang) => {
+    const data = heroTranslations[lang] || heroTranslations.pt;
+    const subList = document.getElementById('heroSubList');
+    const subline = document.getElementById('heroSubline');
+    if (subList) {
+      const items = subList.querySelectorAll('li span');
+      items.forEach((span, index) => {
+        if (data.items[index]) span.textContent = data.items[index];
+      });
+    }
+    if (subline) {
+      subline.textContent = data.subline;
+    }
+  };
+
   // Language Selector (PT | EN | ES)
   const langButtons = document.querySelectorAll('.lang-btn');
   langButtons.forEach(btn => {
@@ -17,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
       langButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const lang = btn.getAttribute('data-lang');
+      updateHeroLang(lang);
+
       if (lang === 'en') {
         const waBtns = document.querySelectorAll('a[href^="https://wa.me"]');
         waBtns.forEach(a => {
