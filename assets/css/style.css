@@ -230,9 +230,10 @@ button, input, select, textarea {
 }
 
 .nav-link {
-  color: var(--silver-300);
-  font-size: 0.95rem;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   position: relative;
   padding: 6px 0;
 }
@@ -249,8 +250,9 @@ button, input, select, textarea {
   border-radius: 2px;
 }
 
-.nav-link:hover {
-  color: var(--white);
+.nav-link:hover,
+.nav-link.active {
+  color: var(--teal-300);
 }
 
 .nav-link:hover::after,
@@ -270,11 +272,12 @@ button, input, select, textarea {
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   padding: 10px 20px;
   border-radius: var(--radius-full);
-  font-size: 0.95rem;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -284,7 +287,7 @@ button, input, select, textarea {
 }
 
 .btn-header-contact .wa-outline-icon {
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.92);
   transition: color 0.3s ease;
   flex-shrink: 0;
 }
@@ -293,6 +296,7 @@ button, input, select, textarea {
   border-color: var(--teal-300);
   color: var(--teal-300);
   background: rgba(18, 184, 161, 0.10);
+  text-shadow: none;
   transform: none;
 }
 
@@ -304,8 +308,8 @@ button, input, select, textarea {
 .lang-selector {
   display: inline-flex;
   align-items: center;
-  background: rgba(14, 32, 57, 0.6);
-  border: 1px solid rgba(0, 229, 208, 0.3);
+  background: rgba(14, 32, 57, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 4px 10px;
   border-radius: var(--radius-full);
   gap: 6px;
@@ -314,10 +318,11 @@ button, input, select, textarea {
 .lang-btn {
   background: transparent;
   border: none;
-  color: var(--silver-400);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
   font-family: var(--font-heading);
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.8px;
   cursor: pointer;
   padding: 3px 6px;
@@ -514,13 +519,13 @@ button, input, select, textarea {
   position: relative;
   background-color: var(--navy-950);
   color: var(--white);
-  padding: 108px 0 54px;
+  padding: 140px 0 60px;
   overflow: hidden;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .hero-video-bg {
@@ -531,6 +536,19 @@ button, input, select, textarea {
   height: 100%;
   overflow: hidden;
   z-index: 0;
+}
+
+/* Degradê escuro no topo atrás do header para legibilidade do menu */
+.hero-video-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-video-bg video {
@@ -702,7 +720,7 @@ button, input, select, textarea {
 
 .hero-subline {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.5;
   margin: 12px 0 0 0;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
@@ -718,7 +736,7 @@ button, input, select, textarea {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 
 .btn-hero-main {
@@ -748,21 +766,6 @@ button, input, select, textarea {
   text-underline-offset: 4px;
 }
 
-.hero-microcopy {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-  color: var(--silver-300);
-  font-weight: 500;
-  letter-spacing: 0.2px;
-}
-
-.hero-microcopy svg {
-  color: #25D366;
-  flex-shrink: 0;
-}
-
 /* Faixa de Destaques (Vidro Fosco no Rodapé do Hero) */
 .hero-highlights-bar {
   display: flex;
@@ -774,7 +777,7 @@ button, input, select, textarea {
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: var(--radius-md);
   padding: 16px 26px;
-  margin-top: 40px;
+  margin-top: 48px;
   max-width: 960px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   animation-delay: 0.70s;
@@ -1394,10 +1397,10 @@ button, input, select, textarea {
 }
 
 .container-wide {
-  max-width: 1760px;
-  width: 96%;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 64px;
 }
 
 .fleet-grid-slim {
@@ -2509,6 +2512,9 @@ button, input, select, textarea {
   .topbar {
     display: none;
   }
+  .container-wide {
+    padding: 0 24px;
+  }
   .header {
     height: 70px;
   }
@@ -2566,7 +2572,7 @@ button, input, select, textarea {
     display: block;
   }
   .hero {
-    padding: 85px 0 50px;
+    padding: 100px 0 50px;
     min-height: auto;
   }
   .hero-f-pattern {
