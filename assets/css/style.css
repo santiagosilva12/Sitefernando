@@ -440,6 +440,16 @@ button, input, select, textarea {
   letter-spacing: -0.5px;
 }
 
+.hero-title-br {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-title-br {
+    display: inline;
+  }
+}
+
 .hero-title span.highlight {
   background: linear-gradient(135deg, var(--teal-300) 0%, var(--teal-400) 100%);
   -webkit-background-clip: text;
@@ -451,7 +461,7 @@ button, input, select, textarea {
   color: var(--silver-200);
   line-height: 1.7;
   margin-bottom: 28px;
-  max-width: 680px;
+  max-width: 720px;
 }
 
 /* F-Pattern Horizontal Scanning Highlights */
@@ -484,12 +494,31 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
+.hero-cta-group {
+  margin-bottom: 35px;
+}
+
 .hero-buttons {
   display: flex;
   align-items: center;
   gap: 18px;
   flex-wrap: wrap;
-  margin-bottom: 35px;
+  margin-bottom: 12px;
+}
+
+.hero-microcopy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--silver-300);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.hero-microcopy svg {
+  color: #25D366;
+  flex-shrink: 0;
 }
 
 .btn-hero-main {
