@@ -15,17 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
     pt: {
       items: ['Transfers para aeroportos', 'Viagens corporativas', 'Diárias com motorista'],
       subline: 'Sul de Minas e São Paulo · Um só contato, do orçamento ao desembarque.',
-      highlights: ['Atendimento 24h', 'Motoristas credenciados', 'Sul de Minas e São Paulo', 'Monitoramento de voo']
+      highlights: ['Atendimento 24h', 'Motoristas credenciados', 'Sul de Minas e São Paulo', 'Monitoramento de voo'],
+      contactBtn: 'Fale conosco'
     },
     en: {
       items: ['Airport transfers', 'Corporate travel', 'Chauffeur by the day'],
       subline: 'Southern Minas Gerais and São Paulo · One contact, from quote to drop-off.',
-      highlights: ['24/7 service', 'Vetted chauffeurs', 'Southern Minas & São Paulo', 'Flight monitoring']
+      highlights: ['24/7 service', 'Vetted chauffeurs', 'Southern Minas & São Paulo', 'Flight monitoring'],
+      contactBtn: 'Contact us'
     },
     es: {
       items: ['Traslados al aeropuerto', 'Viajes corporativos', 'Chofer por día'],
       subline: 'Sur de Minas Gerais y São Paulo · Un solo contacto, del presupuesto al destino.',
-      highlights: ['Atención 24h', 'Choferes acreditados', 'Sur de Minas y São Paulo', 'Monitoreo de vuelos']
+      highlights: ['Atención 24h', 'Choferes acreditados', 'Sur de Minas y São Paulo', 'Monitoreo de vuelos'],
+      contactBtn: 'Contáctenos'
     }
   };
 
@@ -47,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
       highlightTexts.forEach((el, index) => {
         if (data.highlights[index]) el.textContent = data.highlights[index];
       });
+    }
+    const headerContactText = document.querySelector('.btn-header-contact .btn-contact-text');
+    if (headerContactText && data.contactBtn) {
+      headerContactText.textContent = data.contactBtn;
     }
   };
 

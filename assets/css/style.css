@@ -207,14 +207,14 @@ button, input, select, textarea {
 }
 
 .brand-logo img {
-  height: 54px;
+  height: 56px;
   width: auto;
   object-fit: contain;
   transition: height 0.3s ease, transform 0.3s ease;
 }
 
 .header.scrolled .brand-logo img {
-  height: 42px;
+  height: 44px;
 }
 
 .brand-logo:hover img {
@@ -225,6 +225,8 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-left: 56px;
+  margin-right: auto;
 }
 
 .nav-link {
@@ -259,7 +261,43 @@ button, input, select, textarea {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
+}
+
+/* Botão de Contato Discreto & Elegante no Header (Outline) */
+.btn-header-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-header-contact .wa-outline-icon {
+  color: var(--white);
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-header-contact:hover {
+  border-color: var(--teal-300);
+  color: var(--teal-300);
+  background: rgba(18, 184, 161, 0.10);
+  transform: none;
+}
+
+.btn-header-contact:hover .wa-outline-icon {
+  color: var(--teal-300);
 }
 
 /* Language Selector (PT | EN | ES) */
@@ -583,7 +621,7 @@ button, input, select, textarea {
 .hero-title {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 3.8vw, 3.55rem);
-  line-height: 1.15;
+  line-height: 1.1;
   font-weight: 800;
   margin-bottom: 22px;
   letter-spacing: -0.5px;
@@ -594,13 +632,16 @@ button, input, select, textarea {
 .hero-line {
   display: block;
   white-space: nowrap;
+  line-height: 1.1;
 }
 
 .hero-title span.highlight {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.08em;
+  line-height: 1;
+  vertical-align: baseline;
   display: inline-block;
   background: linear-gradient(
     115deg,
@@ -2475,10 +2516,27 @@ button, input, select, textarea {
     height: 64px;
   }
   .brand-logo img {
-    height: 40px;
+    height: 42px;
   }
   .header.scrolled .brand-logo img {
     height: 38px;
+  }
+  .nav-actions {
+    gap: 12px;
+  }
+  .btn-header-contact {
+    padding: 8px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+  .btn-header-contact .btn-contact-text {
+    display: none;
+  }
+  .btn-header-contact .wa-outline-icon {
+    width: 20px;
+    height: 20px;
   }
   .services-grid {
     grid-template-columns: 1fr;
@@ -2495,6 +2553,8 @@ button, input, select, textarea {
     flex-direction: column;
     padding: 24px;
     gap: 16px;
+    margin-left: 0;
+    margin-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(-150%);
     transition: transform 0.4s ease;
